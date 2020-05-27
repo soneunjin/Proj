@@ -1,0 +1,23 @@
+.mg30 {
+	margin-top: 15px;
+	margin-bottom: 0px;
+}
+td {
+	padding-bottom: 0px;
+}
+#wrap {
+    width: 1000px;
+    margin: 0 auto 0 auto;
+}
+#topForm {
+    text-align :right;
+}
+#board, #searchForm {
+    text-align :center;
+}
+
+#bList {
+    text-align :center;
+    width: 1000px;
+    margin-left: 0px;
+}

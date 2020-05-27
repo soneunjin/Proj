@@ -1,0 +1,37 @@
+html, body {
+	height: 100%;
+	margin-bottom: 0px;
+}
+.mxw {
+	max-width: 700px;
+}
+.mxw2 {
+	max-width: 1000px;
+}
+.box {
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	margin: 10px;
+}
+.h-100 {
+	height : 100%;
+}
+.h300 {
+	height: 300px;
+}
+.h450 {
+	height: 450px;
+}
+.mb0 {
+	margin-bottom: 0px;
+}
+.w-150 {
+	width: 150px;
+}
+.w-200 {
+	width: 200px;
+}
+.inblock {
+	display: inline-block;
+}

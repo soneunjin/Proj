@@ -1,0 +1,49 @@
+	tr {
+ border: 0px solid none;
+}
+k:hover {
+ text-decoration: none;
+ color: #9354ED
+}
+.trang{
+	width: 10px;
+  height: 27px;
+  transition: width 1s;
+  margin-bottom:10px;
+  background-color: #F6F6F6;
+  display: none;
+ overflow: hidden; /*내용이 요소 밖으로 나가면 가려줌.*/
+}
+.firstDiv{
+  width: 400px;
+  height: 27px;
+}
+
+	button {
+
+    width:100px;
+
+    background-color: #f8585b;
+
+    border: none;
+
+    color:#fff;
+
+    padding: 15px 0;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    display: inline-block;
+
+    font-size: 15px;
+
+    margin: 4px;
+
+    cursor: pointer;
+
+}
+.he-10{
+	height:54px;
+}

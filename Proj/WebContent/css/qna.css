@@ -1,0 +1,52 @@
+#wrap {
+	width: 1200px;
+	margin: 0 auto 0 auto;
+}
+
+#topForm {
+	text-align: right;
+}
+
+#board, #pageForm {
+	text-align: center;
+}
+
+#bList {
+	max-width: 1200px;
+	text-align: center;
+	border: 3px;
+	bordercolor: "lightgray";
+}
+
+#searchForm {
+	max-width: 80%;
+	margin-left: 25%;
+}
+
+#botform {
+	max-width: 80%;
+}
+.tagbtn {
+	margin-bottom: 3px;
+}
+
+
+.title {
+	height: 16;
+	font-family: '돋움';
+	font-size: 20;
+	font-weight :bold;
+	border-right : 1px dashed black;
+	border-left : 1px dashed black;
+	text-align: center;
+	
+}
+#detailBoard {
+	text-align: center;
+}
+.w-1000 {
+	width: 100%;
+}
+.w-800 {
+	width: 800px;
+}
