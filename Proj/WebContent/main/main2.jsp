@@ -45,6 +45,11 @@
 			alert('비밀번호 변경 페이지로!!!')
 		});
 		
+		$('#binfo').click(function () {
+			$(location).attr('href','/Project/main/InsertCo.cls');
+			alert('사업자 등록 페이지로!!!')
+		});
+		
 	});
 </script>
 	<body class="is-preload" >
@@ -66,7 +71,7 @@
 									</c:if>
 									<c:if test="${not empty SID}">
 										<li id="mypage"><b><span>회원 정보</span></b></li>
-										<a href="/Project/main/main3.jsp"><li class="btn" id="binfo"><b><span>사업자 정보</span></b></li></a>
+										<li id="binfo"><b><span>사업자 정보</span></b></li></a>
 										<li id="pwModi"><b><span>비밀번호 변경</span></b></li>
 										<li id="logout"><b><span>SIGN OUT</span></b></li>
 									</c:if>
@@ -157,20 +162,18 @@
 										<h2>Manu</h2>
 									</header>
 									<ul>
-										<li><a href="/Project/main.cls">모른당X</a></li>
-										<li><a href="/Project/sales/sales.jsp">팝니당$</a></li>
+										<li><a href="/Project/sales/sales.cls">팝니당$</a></li>
 										<li>
 											<span class="opener">오세용~</span>
 											<ul>
-												<li><a href="#">음식점</a></li>
-												<li><a href="#">자동차 극장</a></li>
-												<li><a href="#">자동차 캠핌장</a></li>
-												<li><a href="#">주차장 정보</a></li>
-												<li><a href="#"></a></li>
+												<li><a href="/Project/info/infoCT.cls">자동차 극장</a></li>
+												<li><a href="/Project/info/infoCP.cls">자동차 캠핌장</a></li>
+												<li><a href="/Project/info/infoDTC.cls">승차 검진소</a></li>
 											</ul>
 										</li>
-										<li><a href="/Project/qna/qnaList.jsp">놀러왕!</a></li>
-										<li><a href="/Project/board/board.jsp">물어봥?</a></li>
+										<li><a href="/Project/board/board.cls">놀러왕!</a></li>
+										<li><a href="/Project/qna/qnaList.cls">물어봥?</a></li>
+										<li><a href="/Project/review/review.cls">리뷰당?</a></li>
 										<!--
 										<li>
 											 <span class="opener">Another Submenu</span>

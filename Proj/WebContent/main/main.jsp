@@ -36,6 +36,11 @@
 			$(location).attr('href','/Project/main/main2.jsp');
 			alert('비밀번호 변경 페이지로!!!')
 		});
+		
+		$('#binfo').click(function () {
+			$(location).attr('href','/Project/main/InsertCo.cls');
+			alert('사업자 등록 페이지로!!!')
+		});
 	});
 </script>
 	<body class="is-preload" >
@@ -57,7 +62,7 @@
 									</c:if>
 									<c:if test="${not empty SID}">
 										<li id="mypage"><b><span>회원 정보</span></b></li>
-										<a href="/Project/main/main3.jsp"><li class="btn" id="binfo"><b><span>사업자 정보</span></b></li></a>
+										<li id="binfo"><b><span>사업자 정보</span></b></li></a>
 										<li id="pwModi"><b><span>비밀번호 변경</span></b></li>
 										<li id="logout"><b><span>SIGN OUT</span></b></li>
 									</c:if>
@@ -125,11 +130,9 @@
 										<li>
 											<span class="opener">오세용~</span>
 											<ul>
-												<li><a href="#">음식점</a></li>
-												<li><a href="#">자동차 극장</a></li>
-												<li><a href="#">자동차 캠핌장</a></li>
-												<li><a href="#">주차장 정보</a></li>
-												<li><a href="#"></a></li>
+												<li><a href="/Project/info/infoCT.cls">자동차 극장</a></li>
+												<li><a href="/Project/info/infoCP.cls">자동차 캠핌장</a></li>
+												<li><a href="/Project/info/infoDTC.cls">진료소 정보</a></li>
 											</ul>
 										</li>
 										<li><a href="/Project/board/board.cls">놀러왕!</a></li>
@@ -167,6 +170,14 @@
 			<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=bfbcb2a9b1a94611a8804b0d71d6315c&libraries=services"></script>
 			<script type="text/javascript">
 			$(function(){
+				var mapContainer = document.getElementById('map2');
+				var mapOption = {
+				    center: new kakao.maps.LatLng(37.517274, 126.981174), // 지도의 중심좌표
+				    level: 3 // 지도의 확대 레벨
+				}// 지도를 표시할 div 
+				
+				// 지도를 생성합니다    
+				var map = new kakao.maps.Map(mapContainer, mapOption); 
 				/*
 				$('#login').click(function(){
 					$(location).attr('href', '/Project/member/login.cls');
@@ -190,8 +201,8 @@
 				
 				$('.loc').click(function(){
 					var loc = $(this).children().attr('id');
-					alert(loc);
-				});
+					var name = $(this).children().html();
+						
 				
 				
 					
@@ -237,8 +248,8 @@
 					});   
 					
 					// 지도 전체 코드
-					
-				});		
+				});
+			});		
 		
 					
 			// 전체함수 감싸는 놈 (위에 기능)	
