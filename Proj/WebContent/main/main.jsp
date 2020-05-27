@@ -121,8 +121,7 @@
 										<h2>Manu</h2>
 									</header>
 									<ul>
-										<li><a href="/Project/main.cls">모른당X</a></li>
-										<li><a href="/Project/sales/sales.jsp">팝니당$</a></li>
+										<li><a href="/Project/sales/sales.cls">팝니당$</a></li>
 										<li>
 											<span class="opener">오세용~</span>
 											<ul>
@@ -133,8 +132,9 @@
 												<li><a href="#"></a></li>
 											</ul>
 										</li>
-										<li><a href="/Project/qna/qnaList.jsp">놀러왕!</a></li>
-										<li><a href="/Project/board/board.jsp">물어봥?</a></li>
+										<li><a href="/Project/board/board.cls">놀러왕!</a></li>
+										<li><a href="/Project/qna/qnaList.cls">물어봥?</a></li>
+										<li><a href="/Project/review/review.cls">리뷰당?</a></li>
 										<!--
 										<li>
 											 <span class="opener">Another Submenu</span>
