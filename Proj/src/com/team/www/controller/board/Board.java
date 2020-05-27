@@ -16,14 +16,10 @@ public class Board implements ClsController {
 	public String exec(HttpServletRequest req, HttpServletResponse resp) {
 		String view = "/board/board.jsp";
 		int nowPage = 1;
-		int nextNo = 1;
-		int preNo = 1;
 		String strPage = req.getParameter("nowPage");
-
 //		System.out.println("NowPage : " + strPage);
 		try {
 			nowPage = Integer.parseInt(strPage);
-			
 			
 		}catch(Exception e) {
 		}
