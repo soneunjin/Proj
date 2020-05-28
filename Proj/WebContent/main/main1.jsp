@@ -67,7 +67,7 @@
 										 -->
 					
 									
-									<FORM method="post" action="/Project/member/EditInfo.cls" id="frm" name="frm">
+									<FORM method="post" action="/Project/member/EditInfo.cls" id="frm1" name="frm1">
 									<span class="image object">
 										<div class="cont">
 										  <div class="form sign-in">
@@ -101,7 +101,7 @@
 					                        	</select>
 										    </label>
 										
-										    <button type="button" class="submit" id="lbtn">Submit</button>
+										    <button type="button" class="submit" id="pobtn">Submit</button>
 										  </div>
 										  </div>   
 									</span>

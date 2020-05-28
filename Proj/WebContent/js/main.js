@@ -12,6 +12,17 @@ $(function(){
 			
 			$(location).attr('href', url);
 		});
+		
+		
+		$('#pobtn').click(function() {
+			if (!isPhone(phone)) {
+   	    	 	alert('핸드폰 번호를 다시입력해주세요. ex) 01012345678');
+     			$('#Phone').focus();
+     			return;
+			}
+		$('#frm1').submit();
+		alert('회원정보가 성공적으로 변경되었습니다.');
+		});
 
 		$('#lbtn').click(function() {
 			var spwa = $('#pw').val();
@@ -28,18 +39,18 @@ $(function(){
     	    	$('#pwe').focus();
     	    	return false;
     	     } 
-			 
-			 
 			$('#frm').submit();
 			alert('성공적으로 변경되었습니다.');
 		});
+		
+		
 		$('#mypage').click(function () {
 			$(location).attr('href','/Project/member/InFoProc.cls');
 			alert('회원정보 페이지로!!!');
 		});
 		
 		$('#pwModi').click(function() {
-			$(location).attr('href','/Project/main/main2.jsp');
+			$(location).attr('href','/Project/member/main2.cls');
 			alert('비밀번호 변경 페이지로!!!')
 		});
 		
@@ -60,6 +71,13 @@ $(function(){
 	   		
 	   		return regex.test(pw);
 	   }
+	   	 
+	   	// 핸드폰번호 정규식
+	   	function isPhone(ph) {
+	 	   var phone = /(^01.{1}|[0-9]{3})([0-9]+)([0-9]{4})$/;
+	 	   
+	 	   return phone.test(ph);
+	    }	   
 		
 		
 	});
