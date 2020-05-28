@@ -30,7 +30,6 @@
 	      });
 		$('#delete').click(function(){
 			   var pno = $('#pno').val();
-			   alert(pno);
 			   $('#frm1').attr('action', '/Project/review/review_deleteProc.cls');
 			   $('#frm1').submit();
 		   });

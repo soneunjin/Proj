@@ -188,10 +188,10 @@ $(document).ready(function() {
 	 */
 	$('.sbtn').click(function() {
 		$('#cfrm').attr('action', '/Project/board/boardComment.cls');
+		window.opener.parent.location.reload();
 		$('#cfrm').submit();
 
 		window.close();
-		window.opener.parent.location.reload();
 
 	});
 

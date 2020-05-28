@@ -95,13 +95,13 @@
 						</table>
 						<table>
 							<tr>
-								<td class="title">제 목</td>
+								<td class="title w3-border w3-card">제 목</td>
 							</tr>
 							<tr>
 								<td>${DATA.bdtt}</td>
 							</tr>
 							<tr>
-								<td class="title">내 용</td>
+								<td class="title w3-border w3-card">내 용</td>
 							</tr>
 							<tr>
 								<td>${DATA.bdbd}</td>

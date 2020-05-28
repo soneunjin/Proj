@@ -69,27 +69,30 @@
 
 	<!-- Wrapper -->
 	<div id="wrapper">
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-							
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
 
-							<!-- Header -->
-								<header id="header">
-									<a href="/Project/main.cls" class="logo"><strong>Main page</strong></a>
-									<ul class="icons">
-									<c:if test="${empty SID}">
-										<li class="btn w3-button" id="login"><b><span>SIGN IN</span></b></li>
-									</c:if>
-									<c:if test="${not empty SID}">
-										<li id="mypage"><b><span>회원 정보</span></b></li>
-										<li id="binfo"><b><span>사업자 정보</span></b></li></a>
-										<li id="pwModi"><b><span>비밀번호 변경</span></b></li>
-										<li class="btn" id="logout"><b><span>SIGN OUT</span></b></li>
-									</c:if>
-									
-									</ul>
-								</header>
+
+				<!-- Header -->
+				<header id="header">
+					<a href="/Project/main.cls" class="logo"><strong>Main
+							page</strong></a>
+					<ul class="icons">
+						<c:if test="${empty SID}">
+							<li class="btn w3-button" id="login"><b><span>SIGN
+										IN</span></b></li>
+						</c:if>
+						<c:if test="${not empty SID}">
+							<li id="mypage"><b><span>회원 정보</span></b></li>
+							<li id="binfo"><b><span>사업자 정보</span></b></li>
+							</a>
+							<li id="pwModi"><b><span>비밀번호 변경</span></b></li>
+							<li class="btn" id="logout"><b><span>SIGN OUT</span></b></li>
+						</c:if>
+
+					</ul>
+				</header>
 
 
 				<div>
@@ -118,7 +121,7 @@
 								</tr>
 								</thred>
 								<c:forEach var="data" items="${LIST}">
-									<tr  class=" content" id="${data.bdno}">
+									<tr class=" content" id="${data.bdno}">
 										<td>${data.bdno}</td>
 										<td>${data.bdct}</td>
 										<td>${data.bdtt}</td>
@@ -190,28 +193,27 @@
 		</div>
 
 		<!-- Sidebar -->
-					<div id="sidebar">
-						<div class="inner">
-							<!-- 
+		<div id="sidebar">
+			<div class="inner">
+				<!-- 
 							<!-- Main link -->
-	
-							<!-- Menu -->
-								<nav id="menu">
-									<header class="major">
-										<a href="/Project/main.cls" width="0px;" height="0px;"> 
-							   			<img class="ima_1" src="/Project/images/main.png" border="0" />
-										<h2>Menu</h2>
-									</header>
-									<ul>
-										<li>
-											<a class="opener" href="/Project/info/infoCT.cls">오세용</a>
-										
-										</li>
-										<li><a href="/Project/sales/sales.cls">팝니당</a></li>
-										<li><a href="/Project/review/review.cls">리뷰당?</a></li>
-										<li><a href="/Project/board/board.cls">놀러왕!</a></li>
-										<li><a href="/Project/qna/qnaList.cls">물어봥?</a></li>
-										<!--
+
+				<!-- Menu -->
+				<nav id="menu">
+					<header class="major">
+						<a href="/Project/main.cls" width="0px;" height="0px;"> <img
+							class="ima_1" src="/Project/images/main.png" border="0" />
+							<h2>Menu</h2>
+					</header>
+					<ul>
+						<li><a class="opener" href="/Project/info/infoCT.cls">오세용</a>
+
+						</li>
+						<li><a href="/Project/sales/sales.cls">팝니당</a></li>
+						<li><a href="/Project/review/review.cls">리뷰당</a></li>
+						<li><a href="/Project/board/board.cls">놀러왕</a></li>
+						<li><a href="/Project/qna/qnaList.cls">물어봥</a></li>
+						<!--
 										<li>
 											 <span class="opener">Another Submenu</span>
 											<ul>
@@ -225,14 +227,14 @@
 										<li><a href="#">Sapien Mauris</a></li>
 										<li><a href="#">Amet Lacinia</a></li>
 									</ul> -->
-									</ul>
-								</nav>
+					</ul>
+				</nav>
 
-
-						</div>
-					</div>
 
 			</div>
+		</div>
+
+	</div>
 
 </body>
 </html>
