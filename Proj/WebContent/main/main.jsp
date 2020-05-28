@@ -47,12 +47,13 @@
 							<section id="banner">
 									<div class="" style="overflow:scroll; width:380px; height: 620px; padding:0px;">
 										<header>
-											<h2><b> 내주변 위치 정보</b></h2><br>
+											<h2><b> TOP 10 추천</b></h2><br>
 											<p></p>
 										</header>
 										<p class="list">
 											<c:forEach var="data" items="${LIST}">
-											   <div class="loc w3-hover"><h4 id="${data.bloc}">${data.bname}</h4><br></div>
+											   <div class="loc w3-hover"><h4 id="${data.bloc}">${data.bname}</h4></div>
+											   <span>별점: ${data.rd}</span><br>
 											</c:forEach>
 										</p>
 										<!-- 
