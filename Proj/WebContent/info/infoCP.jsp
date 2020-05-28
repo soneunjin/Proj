@@ -200,15 +200,10 @@
 						success: function(obj){
 							$('.detail').css('display', '');
 							var name = obj.name;
-							alert(name);
 							var tel = obj.tel;
-							alert(tel);
 							var addr = obj.addr;
-							alert(addr);
 							var price = obj.price;
-							alert(price);
 							var link = obj.link;
-							alert(link);
 							$('#ctname').html(name);
 							$('#cttel').html(tel);
 							$('#ctaddr').html(addr);

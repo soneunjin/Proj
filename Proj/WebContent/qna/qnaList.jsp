@@ -95,7 +95,9 @@
                            <c:if test="${empty SID}">
                               <li><a href="/Project/member/login.jsp" class="w3-col"><b><span>SIGN IN</span></b></a></li>
                            </c:if>
+                           <c:if test="${not empty SID}">
                               <li><a href="/Project/member/logoutProc.cls" class="w3-col"><b><span>SIGN OUT</span></b></a></li>
+                           </c:if>
                            </ul>
                       
 				</header>

@@ -32,7 +32,7 @@
 				<!-- Header -->
 				<header id="header">
 	
-                           <a href="index.jsp" class="logo"><strong>Main page</strong></a>
+                           <a href="/Project/main.cls" class="logo"><strong>Main page</strong></a>
                            <ul class="icons">
                            <c:if test="${empty SID}">
                               <li><a href="/Project/member/login.jsp" class="w3-col"><b><span>SIGN IN</span></b></a></li>
