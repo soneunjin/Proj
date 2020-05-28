@@ -41,6 +41,12 @@
 #detailBoard {
 	text-align: center;
 }
-.w-1000 {
-	width: 100%;
+.w-300 {
+	width: 300px;
+}
+.mrg_left{
+	margin-left: 50px;
+}
+.content{
+	color: gray;
 }

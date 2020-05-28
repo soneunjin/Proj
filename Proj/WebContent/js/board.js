@@ -1,16 +1,30 @@
 /*
  	board.jsp
  */
+
 $(document).ready(function() {
+	
+	$('.content').hover(function() {
+		$(this).css("color", "brown")
+		$(this).css("font-weight", "bold")
+
+	}, function() {
+		$(this).css("color", "gray");
+		$(this).css("font-weight", "")
+	});
 	$('.content').click(function() {
 		// 할일
 		// 글 번호 알아낸다.
 		var sno = $(this).attr('id');
 		$('#bno').val(sno);
+		$('#nowPage').val('${PAGE.nowPage}');
 		$('#frm').attr('action', '/Project/board/boardDetail.cls');
 		$('#frm').submit();
 
 	});
+
+
+
 	$('.pbtn').click(function() {
 		var str = $(this).text();
 		$('#nowPage').val(str);
@@ -56,23 +70,20 @@ $(document).ready(function() {
 
 			$(location).attr('href', url);
 		});
+		$('.wrbtn').click(function() {
+			location.href = '/Project/board/boardWrite.cls'
+			$(location).attr('href', url);
+		});
 
 	});
 
-});
-function writeForm() {
-	location.href = "/Project/board/boardWrite.cls";
+	/*
+	 * cboard.jsp
+	 */
 
-}
-
-/*
- * cboard.jsp
- */
-
-/*
- * boardDetail.jsp
- */
-$(document).ready(function() {
+	/*
+	 * boardDetail.jsp
+	 */
 	$('.deletedetail').click(function() {
 		// 할일
 		// 글 번호를 알아낸다
@@ -114,14 +125,12 @@ $(document).ready(function() {
 	 * boardEdit.jsp
 	 */
 
-	$(document).ready(function() {
-		$('#editbtn').click(function() {
-			$('#frm').submit();
-		});
-		$('#hbtn').click(function() {
-			alert('HOME으로 이동합니다 GoGo');
-			$(location).attr('href', '/Project/main.cls')
-		});
+	$('#editbtn').click(function() {
+		$('#frm').submit();
+	});
+	$('#hbtn').click(function() {
+		alert('HOME으로 이동합니다 GoGo');
+		$(location).attr('href', '/Project/main.cls')
 	});
 	/*
 	 * boardWrite
@@ -132,16 +141,7 @@ $(document).ready(function() {
 	/*
 	 * sboard.jsp
 	 */
-	$('.content').click(function() {
-		// 할일
-		// 글 번호 알아낸다.
-		var sno = $(this).attr('id');
-		$('#bno').val(sno);
-		$('#nowPage').val('${PAGE.nowPage}');
-		$('#frm').attr('action', '/Project/board/boardDetail.cls');
-		$('#frm').submit();
-
-	});
+	
 	$('.spbtn').click(function() {
 		var str = $(this).text();
 		$('#nowPage').val(str);
@@ -167,24 +167,14 @@ $(document).ready(function() {
 	/*
 	 * cboard.jsp
 	 */
-	$('.content').click(function() {
-		// 할일
-		// 글 번호 알아낸다.
-		var sno = $(this).attr('id');
-		$('#bno').val(sno);
-		$('#nowPage').val('${PAGE.nowPage}');
-		$('#frm').attr('action', '/Project/board/boardDetail.cls');
-		$('#frm').submit();
 
-	});
 	$('.cpbtn').click(function() {
 		var str = $(this).text();
 		$('#nowPage').val(str);
 		$('#frm').attr('action', '/Project/board/Cboard.cls');
 		$('#frm').submit();
 	});
-//C보드 카테고리간 이동 가능하게 하기
-	
+	// C보드 카테고리간 이동 가능하게 하기
 
 	$('.ctagbtn').click(function() {
 		var cat = $(this).attr('id');
@@ -196,15 +186,12 @@ $(document).ready(function() {
 	 * comment.jsp
 	 */
 	$('.sbtn').click(function() {
-		$('#cfrm').attr('action', '/Project/board/boardComment.cls' );
-		opener.parent.location.reload();
-
+		$('#cfrm').attr('action', '/Project/board/boardComment.cls');
 		$('#cfrm').submit();
-		
-		window.close();
-		
 
-		
+		window.close();
+		window.opener.parent.location.reload();
+
 	});
 
 });

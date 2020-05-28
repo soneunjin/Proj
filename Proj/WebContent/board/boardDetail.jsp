@@ -37,7 +37,7 @@
 
 			event.preventDefault();
 		}
-	}, true);
+	}, true); 
 </script>
 </head>
 <body class="is-preload">

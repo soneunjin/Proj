@@ -38,6 +38,21 @@
 			$('#frm').attr('action', '/Project/board/board.cls');
 			$('#frm').submit();
 		});
+
+		window.addEventListener("keydown", function(event) {
+			if (event.defaultPrevented) {
+				return;
+			}
+			var handled = false;
+			if (event.keyCode == 116)
+				handled = true;
+
+			if (handled) {
+				location.href = '/Project/board/board.cls'
+				$(location).attr('href', url);
+				event.preventDefault();
+			}
+		}, true);
 	});
 </script>
 
@@ -49,21 +64,6 @@
 		<!-- Main -->
 		<div id="main">
 			<div class="inner">
-
-				<form method="post" action="" id="frm">
-					<input type="hidden" name="nowPage" id="nowPage"
-						value="${param.nowPage}"> <input type="hidden" name="bno"
-						id="bno"> <input type="hidden" name="startPage"
-						id="startPage" value="${PAGE.startPage}"> <input
-						type="hidden" name="endPage" id="endPage" value="${PAGE.endPage}">
-				</form>
-				<form method="post" action="" id="frm">
-					<input type="hidden" name="bno" id="bno"> <input
-						type="hidden" name="nowPage" id="nowPage" value="${PAGE.nowPage}">
-				</form>
-				<form method="post" action="" id="tfrm">
-					<input type="hidden" name="tab" id="tab">
-				</form>
 
 
 				<!-- Header -->
@@ -84,6 +84,7 @@
 				</header>
 
 
+
 				<div>
 					<br>
 					<div id="topForm">
@@ -92,72 +93,90 @@
 						</c:if>
 
 					</div>
-					<br> <input class="bdh" type="button" id="전체" value="전체">
-					<input class="tagbtn" type="button" id="공지" value="공지"> <input
-						class="tagbtn" type="button" id="팁" value="팁"> <input
-						class="tagbtn" type="button" id="이벤트" value="이벤트">
-					<div id="board">
-						<table id="bList">
-							<thred>
-							<tr heigh="30">
-								<td>글번호</td>
-								<td>종류</td>
-								<td>제목</td>
-								<td>작성자</td>
-								<td>작성일</td>
-								<td>조회수</td>
-							</tr>
-							</thred>
-							<c:forEach var="data" items="${LIST}">
-								<tr class="w3-text-gray content" id="${data.bdno}">
-									<td>${data.bdno}</td>
-									<td>${data.bdct}</td>
-									<td>${data.bdtt}</td>
-									<td>${data.name}</td>
-									<td>${data.sdate}</td>
-									<td>${data.vcnt}</td>
+					<div class="mrg_left">
+						<br> <input class="bdh" type="button" id="전체" value="전체">
+						<input class="tagbtn" type="button" id="공지" value="공지"> <input
+							class="tagbtn" type="button" id="팁" value="팁"> <input
+							class="tagbtn" type="button" id="이벤트" value="이벤트">
+						<div id="board">
+							<table id="bList">
+								<thred>
+								<tr heigh="30">
+									<td>글번호</td>
+									<td>종류</td>
+									<td>제목</td>
+									<td>작성자</td>
+									<td>작성일</td>
+									<td>조회수</td>
 								</tr>
-							</c:forEach>
-						</table>
-					</div>
-					<div class="w3-center">
-						<div class="w3-bar w3-border">
-							<c:if test="${PAGE.startPage lt (PAGE.pageGroup + 1) }">
-								<span class="w3-bar-item w3-light-gray">PRE</span>
-							</c:if>
-							<c:if test="${PAGE.startPage ge (PAGE.pageGroup + 1) }">
-								<span class="w3-bar-item pgbt w3-button w3-hover-blue pbtn"
-									>PRE</span>
-							</c:if>
-							<c:forEach var="pageNo" begin="${PAGE.startPage}"
-								end="${PAGE.endPage}">
-								<span
-									class="w3-bar-item pgbt w3-border-left w3-button w3-hover-blue pbtn">${pageNo}</span>
-							</c:forEach>
-							<c:if test="${PAGE.endPage ne PAGE.totalPage}">
-								<span
-									class="w3-bar-item pgbt w3-border-left w3-button w3-hover-blue pbtn"
-									>NEXT</span>
-							</c:if>
-							<c:if test="${PAGE.endPage eq PAGE.totalPage}">
-								<span class="w3-bar-item  w3-border-left w3-light-gray ">NEXT</span>
-							</c:if>
+								</thred>
+								<c:forEach var="data" items="${LIST}">
+									<tr  class=" content" id="${data.bdno}">
+										<td>${data.bdno}</td>
+										<td>${data.bdct}</td>
+										<td>${data.bdtt}</td>
+										<td>${data.name}</td>
+										<td>${data.sdate}</td>
+										<td>${data.vcnt}</td>
+									</tr>
+								</c:forEach>
+							</table>
 						</div>
-					</div>
-					<div class="w3-center" id="searchForm">
+						<div class="w3-center">
+							<div class="w3-bar w3-border">
+								<c:if test="${PAGE.startPage lt (PAGE.pageGroup + 1) }">
+									<span class="w3-bar-item w3-light-gray">PRE</span>
+								</c:if>
+								<c:if test="${PAGE.startPage ge (PAGE.pageGroup + 1) }">
+									<span class="w3-bar-item pgbt w3-button w3-hover-blue pbtn">PRE</span>
+								</c:if>
+								<c:forEach var="pageNo" begin="${PAGE.startPage}"
+									end="${PAGE.endPage}">
+									<span
+										class="w3-bar-item pgbt w3-border-left w3-button w3-hover-blue pbtn">${pageNo}</span>
+								</c:forEach>
+								<c:if test="${PAGE.endPage ne PAGE.totalPage}">
+									<span
+										class="w3-bar-item pgbt w3-border-left w3-button w3-hover-blue pbtn">NEXT</span>
+								</c:if>
+								<c:if test="${PAGE.endPage eq PAGE.totalPage}">
+									<span class="w3-bar-item  w3-border-left w3-light-gray ">NEXT</span>
+								</c:if>
+							</div>
+						</div>
+						<div class="w3-center" id="searchForm">
 
-						<form method="post" action="" id="search">
-							<select name="condition" style="margin: 10px;">
-								<option value="bdtt">제목</option>
-								<option value="bdbd">내용</option>
-								<option value="name">글쓴이</option>
-							</select> <input type="text" size="20" name="input" style="margin: 10px;" /><input
-								id="serbtn" type="submit" value="search" style="margin: 10px;" />
+							<form method="post" action="" id="search">
+								<select name="condition" style="margin: 10px;">
+									<option value="bdtt">제목</option>
+									<option value="bdbd">내용</option>
+									<option value="name">글쓴이</option>
+								</select> <input type="text" size="20" name="input" style="margin: 10px;">
+								<input id="serbtn" type="submit" value="search"
+									style="margin: 10px;">
+								<c:if test="${SID!=null}">
+									<input type="button" value="글쓰기" class="wrbtn">
+								</c:if>
+
+							</form>
+
+						</div>
+						<form method="post" action="" id="frm">
+							<input type="hidden" name="nowPage" id="nowPage"
+								value="${param.nowPage}"> <input type="hidden"
+								name="bno" id="bno"> <input type="hidden"
+								name="startPage" id="startPage" value="${PAGE.startPage}">
+							<input type="hidden" name="endPage" id="endPage"
+								value="${PAGE.endPage}">
 						</form>
-						<c:if test="${sessionScope.sessionID!=null}">
-						</c:if>
-						<input type="button" value="글쓰기" onclick="writeForm()">
-
+						<form method="post" action="" id="frm">
+							<input type="hidden" name="bno" id="bno"> <input
+								type="hidden" name="nowPage" id="nowPage"
+								value="${PAGE.nowPage}">
+						</form>
+						<form method="post" action="" id="tfrm">
+							<input type="hidden" name="tab" id="tab">
+						</form>
 					</div>
 				</div>
 			</div>
@@ -172,14 +191,13 @@
 				<!-- Menu -->
 				<nav id="menu">
 					<header class="major">
-						<a href="/Project/main.jsp" width="0px;" height="0px;"> <img
-							class="ima_1" src="/Project/images/main.png" border="0" />
+						<a href="/Project/main.cls"> <img class="ima_1"
+							src="/Project/images/main.png" border="0" />
 						</a>
 						<h2>Manu</h2>
 					</header>
 					<ul>
-						<li><a href="/Project/main.cls">모른당X</a></li>
-						<li><a href="/Project/sales/sales.jsp">팝니당$</a></li>
+						<li><a href="/Project/sales/sales.cls">팝니당$</a></li>
 						<li><span class="opener">오세용~</span>
 							<ul>
 								<li><a href="#">음식점</a></li>
@@ -189,7 +207,8 @@
 								<li><a href="#"></a></li>
 							</ul></li>
 						<li><a href="/Project/board/board.cls">놀러왕!</a></li>
-						<li><a href="/Project/board/board.jsp">물어봥?</a></li>
+						<li><a href="/Project/qna/qnaList.cls">물어봥?</a></li>
+						<li><a href="/Project/review/review.cls">리뷰당?</a></li>
 						<!--
 										<li>
 											 <span class="opener">Another Submenu</span>
@@ -207,21 +226,11 @@
 					</ul>
 				</nav>
 
-				<!-- Section -->
-				<section>
-					<header class="major"> </header>
-				</section>
-
-				<!-- Section -->
 
 			</div>
 		</div>
 
 	</div>
-	<!-- Section -->
-	<section>
-		<header class="major"> </header>
-	</section>
 
 </body>
 </html>

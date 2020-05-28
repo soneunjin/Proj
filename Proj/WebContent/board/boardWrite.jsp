@@ -61,7 +61,7 @@
 						</tr>
 						<tr>
 							<td >제 목
-							<td><select id = "cate" style="width: 100px " name="cate">
+							<td><select id = "cate" style="width: 200px " name="cate">
 									<option value="공지">공지</option>
 									<option value="팁">팁</option>
 									<option value="이벤트">이벤트</option>

@@ -23,6 +23,7 @@ public class BoardWriteProc implements ClsController {
 		System.out.println(sid);
 		BoardDAO bDAO = new BoardDAO();
 		int cnt = bDAO.addData(cate, title, body, sid);
+		
 		return view;
 		
 	}

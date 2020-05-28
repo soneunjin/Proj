@@ -19,9 +19,9 @@
 <link rel="stylesheet" href="/Project/assets/css/main.css" />
 <link rel="stylesheet" href="/Project/css/w3.css" />
 <link rel="stylesheet" href="/Project/css/board.css" />
+
 <script type="text/javascript" src="/Project/js/jquery-3.5.0.min.js"></script>
 <script type="text/javascript" src="/Project/js/board.js"></script>
-
 <script type="text/javascript" src="/Project/js/login.js"></script>
 </head>
 <script type="text/javascript">

@@ -14,13 +14,11 @@
 </style>
 <script type="text/javascript">
 	$(document).ready(function() {
-		$('.sbtn').click(function() {
-			
+		$('.asbtn').click(function() {
 			$('#cfrm').attr('action', '/Project/board/boardCommentEdit.cls' );
-			opener.parent.location.reload();
 			$('#cfrm').submit();
 			window.close();
-			
+			opener.parent.location='Project/board/boardDetail.cls'
 		});
 	});
 </script>
@@ -30,9 +28,9 @@
 
 		<div class="w3-container w3-margin-top">
 			<button class="w3-left">댓글입력</button>
-			<button class="w3-right sbtn">수정</button>
+			<button class="w3-right asbtn">수정</button>
 			<form id="cfrm" method="post" action="">
-				<input type="hidden" name="bdno" id="bdno" value="${no}" >
+				<input type="hidden" name="bdno" id="bdno" value="${no}" >${no}
 				<textarea class="comment" name="comment" id="comment"
 					style="width: 700px; height: 180px;" type="text" col="60" row="5">${bd}</textarea></form>
 		</div>

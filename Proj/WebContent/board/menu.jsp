@@ -19,8 +19,9 @@
 			window.open("", "d", "width=730, height=300, left=200, top=200");
 			$('#cmfrm').attr("target", "d");
 			$('#cmfrm').attr('action', '/Project/board/boardCommentEditProc.cls');
-			opener.parent.location.reload();
+			
 			$('#cmfrm').submit();
+			window.close();
 		});
 		$('.del').click(function() {
 			$('#cmfrm').attr('action', '/Project/board/boardDelete.cls');
@@ -36,7 +37,7 @@
 		<input class = "edt" type="button" value="수정" >	<input class = "del" type="button" value="삭제" > 		
 			
 	</div>
-	<form method="post" action="" id="cmfrm">
+					<form method="post" action="" id="cmfrm">
 						<input type="hidden" name="no" id="no" value="${bdno}">
 						<input type="hidden" name="bd" id="bd" value="${cobd}">
 					</form>
