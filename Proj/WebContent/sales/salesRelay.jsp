@@ -26,19 +26,7 @@
 	 <input type="hidden" name="memid"  value="${ID}"> 
 		<input type="hidden" name="img"  value="${IMG}">
 		<input type="hidden" name="car"  value="${CAR}">
-		<%-- <input type="hidden" name="cate"  value="${DATA.cate}">
-		<input type="hidden" name="rno"  value="${DATA.rno}">
-		<input type="hidden" name="rtt"  value="${DATA.rtt}">
-		<input type="hidden" name="rbd"  value="${DATA.rdb}">
-		<input type="hidden" name="memno"  value="${DATA.memno}">
-		<input type="hidden" name="rst"  value="${DATA.rst}">
-		<c:if test="${not empty DATA.file}">
-			<c:forEach var="data" items="${DATA.file}">
-				<input type="hidden" name="imgno" value="${data.imgno}">
-				<input type="hidden" name="oriname" value="${data.oriname}">
-				<input type="hidden" name="savename" value="${data.savename}">
-			</c:forEach>
-		</c:if> --%>
+		
 	</form>
 </body>
 </html>

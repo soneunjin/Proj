@@ -10,7 +10,7 @@ public class Sales_write implements ClsController {
 	@Override
 	public String exec(HttpServletRequest req, HttpServletResponse resp) {
 		String view = "/sales/sales_write.jsp";
-		if((String)req.getSession().getAttribute("sid") == null){
+		if((String)req.getSession().getAttribute("SID") == null){
 			req.setAttribute("isRedirect", true);
 			view = "/Project/member/login.cls";
 		}

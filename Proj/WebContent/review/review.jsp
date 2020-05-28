@@ -14,7 +14,6 @@
 </head>
 <script type="text/javascript">
 	$(function(){
-		
 		$('.btn').click(function() {
 			var tid = $(this).attr('id');
 			var url = '';
@@ -22,9 +21,8 @@
 				url = '/Project/member/login.cls';
 			} else if (tid == 'logout') {
 				url = '/Project/member/logoutProc.cls';
-			} 
 			
-			$(location).attr('href', url);
+			}
 		});
 		$('.rbtn').click(function(){
 			var rno = $(this).parents('div').attr('id');
@@ -70,7 +68,7 @@
                   HTML5 UP</a>
 
                <div class="icons">
-                  <a href="/Project/login.jsp" class="">
+                  <a href="/Project/login.cls" class="">
                   	<c:if test="${empty SID}">
 						<div class="btn w3-button" id="login"><b><span>SIGN IN</span></b></a></div>
 					</c:if>
@@ -140,19 +138,19 @@
 						</a>
 						<h2>Manu</h2>
 					</header>
-					<ul>
-                  <li><a href="index.html">여기는 뭐지?</a></li>
-                  <li><a href="/Project/sales/sales.cls">팝니당</a></li>
-                  <li><span class="opener">가세용</span>
-                     <ul>
-                        <li><a href="#">D.T 점</a></li>
-                        <li><a href="#">자동차극장</a></li>
-                        <li><a href="#">자동차캠핑</a></li>
-                        <li><a href="#">선별진료소</a></li>
-                        <li><a href="#">주차장</a></li>
-                     </ul></li>
-                  <li><a href="#">놀러왕</a></li>
-                  <li><a href="#">물어봥</a></li>
+				<ul>
+					<li><a href="/Project/sales/sales.cls">팝니당$</a></li>
+					<li>
+						<span class="opener">오세용~</span>
+						<ul>
+							<li><a href="/Project/info/infoCT.cls">자동차 극장</a></li>
+							<li><a href="/Project/info/infoCP.cls">자동차 캠핌장</a></li>
+							<li><a href="/Project/info/infoDTC.cls">진료소 정보</a></li>
+						</ul>
+					</li>
+					<li><a href="/Project/board/board.cls">놀러왕!</a></li>
+					<li><a href="/Project/qna/qnaList.cls">물어봥?</a></li>
+					<li><a href="/Project/review/review.cls">리뷰당?</a></li>
                </ul>
             </nav>
          </div>

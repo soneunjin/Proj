@@ -28,7 +28,7 @@
 			
 			$(location).attr('href', url);
 		});
-		$('.content').click(function(){
+		$('.saleslist').click(function(){
 			var sno = $(this).attr('id');
 			$('#pno').val(sno);
 			$('#nowPage').val('${PAGE.nowPage}');
@@ -72,7 +72,7 @@
                   HTML5 UP</a>
 
                <div class="icons">
-                  <a href="/Project/login.jsp" class="">
+                  <a href="/Project/login.cls" class="">
                   	<c:if test="${empty SID}">
 						<div class="btn w3-button" id="login"><b><span>SIGN IN</span></b></a></div>
 					</c:if>
@@ -86,15 +86,14 @@
             <div id="wrap">
                <br>
                <div id="topForm">
-                  <a href="/Project/sales/sales_write.jsp"><b>글쓰기</b></a>
+                  <a href="/Project/sales/sales_write.cls"><b>글쓰기</b></a>
                </div>
                <br>
                <div id="board" style="max-width: 1500px;">
                   <div></div>
                   <thread>
-                  <table id="bList" cellspacing=0 cellpadding=0>
-                     <tr style="font-size: 12pt; text-align: center;" cellspacing=0
-                        cellpadding=0>
+                  <table id="bList" style="">
+                     <tr style="font-size: 12pt; text-align: center;">
                         <td>글번호</td>
                         <td>제목</td>
                         <td>작성자</td>
@@ -103,7 +102,7 @@
                      </tr>
                   </thread>
                      <c:forEach var="data" items="${LIST}">
-	                     <tr class="content" style= "font-size: 14pt; vertical-align: middle;" id="${data.pno}">
+	                     <tr class="saleslist" style= "font-size: 14pt; vertical-align: middle;" id="${data.pno}">
 	                        <td style="font-size: 12pt; text-align: center;" name="pno" >${data.pno}<br>
 	                        <td style= "font-size: 14pt; vertical-align: middle;" name="ptt">${data.ptt}</td>
 	                        <td  style= "font-size: 14pt; vertical-align: middle;" name="bceo">${data.bceo}</td>
@@ -143,24 +142,24 @@
             <!-- Menu -->
             <nav id="menu">
 					<header class="major">
-						<a href="/Project/main.cls" width="0px;" height="0px;"> <img
-							class="ima_1" src="/Project/images/main.png" border="0" />
+						<a href="/Project/main.cls" width="0px;" height="0px;"> 
+						<img class="ima_1" src="/Project/images/main.png" border="0" />
 						</a>
-						<h2>Manu</h2>
+						<h2>Menu</h2>
 					</header>
-					<ul>
-                  <li><a href="/Project/sales/sales.jsp">팝니당</a></li>
-				<li><a href="/Project/review/review.cls">리뷰당</a></li>
-                  <li><span class="opener">가세용</span>
-                     <ul>
-                        <li><a href="#">D.T 점</a></li>
-                        <li><a href="#">자동차극장</a></li>
-                        <li><a href="#">자동차캠핑</a></li>
-                        <li><a href="#">선별진료소</a></li>
-                        <li><a href="#">주차장</a></li>
-                     </ul></li>
-                  <li><a href="#">놀러왕</a></li>
-                  <li><a href="#">물어봥</a></li>
+				<ul>
+					<li><a href="/Project/sales/sales.cls">팝니당$</a></li>
+					<li>
+						<span class="opener">오세용~</span>
+						<ul>
+							<li><a href="/Project/info/infoCT.cls">자동차 극장</a></li>
+							<li><a href="/Project/info/infoCP.cls">자동차 캠핌장</a></li>
+							<li><a href="/Project/info/infoDTC.cls">진료소 정보</a></li>
+						</ul>
+					</li>
+					<li><a href="/Project/board/board.cls">놀러왕!</a></li>
+					<li><a href="/Project/qna/qnaList.cls">물어봥?</a></li>
+					<li><a href="/Project/review/review.cls">리뷰당?</a></li>
                </ul>
             </nav>
          </div>

@@ -16,6 +16,16 @@
 	<script type="text/javascript" src="/Project/assets/js/sales.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
+			$('.btn').click(function() {
+				var tid = $(this).attr('id');
+				var url = '';
+				if(tid == 'login') {
+					url = '/Project/member/login.cls';
+				} else if (tid == 'logout') {
+					url = '/Project/member/logoutProc.cls';
+				
+				}
+			   });
 			   $('#list').click(function(){
 				   $(location).attr('href', '/Project/sales/sales.cls');
 			   });
@@ -35,6 +45,7 @@
 				   $('#frm1').attr('action', '/Project/sales/sales_modify.cls');
 				   $('#frm1').submit();
 			   });
+			   
 		   });
 	</script>
 	<!-- Wrapper -->
@@ -44,11 +55,11 @@
 			<div class="inner">
 				<!-- Header -->
 				<header id="header">
-					<a href="index.html" class="logo"><strong>Editorial</strong> by
+					<a href="/Project/main.cls" class="logo"><strong>Editorial</strong> by
 						HTML5 UP</a>
 
 					<div class="icons">
-                 		 <a href="/Project/login.jsp" class="">
+                 		 <a href="/Project/login.cls" class="">
                   	<c:if test="${empty SID}">
 						<div class="btn w3-button" id="login"><b><span>SIGN IN</span></b></a></div>
 					</c:if>
@@ -84,7 +95,7 @@
 					<div id="topForm" style="text-align: left; padding-left: 10px;"><b>매장 정보</b></div>
 					<hr style="margin: 15px;">
 					<br>
-					<div id="board" style="max-width: 1500px;">
+					<div id="board" style="width: 1000px;">
 					<c:if test="${not empty CAR}">
 						<div style="text-align: left;">
 							<h5 style="font-color: gray; padding-left: 15px;" name="car">매장진입 추천차량</h5>
@@ -97,9 +108,9 @@
 					</div>
 					<br>
 					 <br>
-					 <div id="map" style="width:500px;height:500px; display: inline-block;"></div>
+					 <div id="map" style="width:450px;height:450px; display: inline-block; margin-left: 50px;"></div>
 					 <span style="margin: 20px;">
-					 <img alt="" src="/Project/images/${param.img}" style="height:500px; width:500px; margin-left: 100px;">
+					 <img alt="" src="/Project/images/${param.img}" style="height:450px; width:450px;">
 					</span>
 					<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=bfbcb2a9b1a94611a8804b0d71d6315c&libraries=services"></script>
 					<script>
@@ -147,7 +158,7 @@
 			</div>
 			<hr style="border:1px solid orange">
 					 <div name="pbd" id="pbd">
-					 	<h3 style="margin: 100px;">${DATA.pbd}</h3>
+					 	<h3 style="text-align: center; margin: 40px;">${DATA.pbd}</h3>
 					 </div>
 			<div style="position:relative; left: 40%;">
  			<c:if test="${SID eq ID}">
@@ -164,30 +175,26 @@
 		<div id="sidebar">
 			<div class="inner">
 
-				<!-- Search -->
-				<section id="search" class="alt">
-					<h3>여기는 나중에 아이콘 또는 이미지 추가예정</h3>
-				</section>
-
 				<!-- Menu -->
 				<nav id="menu">
 					<header class="major">
-						<a href="/Project/index.jsp"><h2>MainPage</h2></a>
+						<img class="ima_1" src="/Project/images/main.png" border="0" />
+						<a href="/Project/main.cls"><h2>MainPage</h2></a>
 					</header>
-					<ul>
-						<li><a href="/Project/sales/sales.jsp">팝니당</a></li>
-						<li><a href="/Project/review/review.cls">리뷰당</a></li>
-						<li><span class="opener">가세용</span>
-							<ul>
-								<li><a href="#">D.T 점</a></li>
-								<li><a href="#">자동차극장</a></li>
-								<li><a href="#">자동차캠핑</a></li>
-								<li><a href="#">선별진료소</a></li>
-								<li><a href="#">주차장</a></li>
-							</ul></li>
-						<li><a href="#">놀러왕</a></li>
-						<li><a href="#">물어봥</a></li>
-					</ul>
+				<ul>
+					<li><a href="/Project/sales/sales.cls">팝니당$</a></li>
+					<li>
+						<span class="opener">오세용~</span>
+						<ul>
+							<li><a href="/Project/info/infoCT.cls">자동차 극장</a></li>
+							<li><a href="/Project/info/infoCP.cls">자동차 캠핌장</a></li>
+							<li><a href="/Project/info/infoDTC.cls">진료소 정보</a></li>
+						</ul>
+					</li>
+					<li><a href="/Project/board/board.cls">놀러왕!</a></li>
+					<li><a href="/Project/qna/qnaList.cls">물어봥?</a></li>
+					<li><a href="/Project/review/review.cls">리뷰당?</a></li>
+               </ul>
 				</nav>
 			</div>
 		</div>
