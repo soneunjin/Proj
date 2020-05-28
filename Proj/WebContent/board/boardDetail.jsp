@@ -42,13 +42,31 @@
 </head>
 <body class="is-preload">
 
-	<!-- Wrapper -->
-	<div id="wrapper">
-		<!-- Main -->
-		<div id="main">
-			<div class="inner">
-				<!-- Header -->
-				<header id="header">
+<div id="wrapper">
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							
+
+							<!-- Header -->
+								<header id="header">
+									<a href="/Project/main.cls" class="logo"><strong>Main page</strong></a>
+									<ul class="icons">
+									<c:if test="${empty SID}">
+										<li class="btn w3-button" id="login"><b><span>SIGN IN</span></b></li>
+									</c:if>
+									<c:if test="${not empty SID}">
+										<li id="mypage"><b><span>회원 정보</span></b></li>
+										<li id="binfo"><b><span>사업자 정보</span></b></li></a>
+										<li id="pwModi"><b><span>비밀번호 변경</span></b></li>
+										<li class="btn" id="logout"><b><span>SIGN OUT</span></b></li>
+									</c:if>
+									
+									</ul>
+								</header>
+
+				<head>
+
 					<form method="post" action="" id="dtfrm">
 						<input type="hidden" name="no" id=no value="${bdno}"> <input
 							type="hidden" name="tt" id="tt" value="${DATA.bdtt}"> <input
@@ -57,17 +75,6 @@
 					<form method="post" action="" id="dtbno">
 						<input type="hidden" name="no" id="no" value="${bdno}">
 					</form>
-
-					<a href="index.jsp" class="logo"><strong>자유게시판</strong></a>
-					<ul class="icons">
-						<li><a href="/Project/login.jsp" class="w3-col"><b><span>SIGN
-										IN</span></b></a></li>
-					</ul>
-
-				</header>
-
-				<head>
-
 				</head>
 				<div id="content">
 					<br> <br>

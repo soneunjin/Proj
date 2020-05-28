@@ -25,28 +25,28 @@
 <script type="text/javascript" src="/Project/js/login.js"></script>
 </head>
 <body class="is-preload">
+<div id="wrapper">
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							
 
-	<!-- Wrapper -->
-	<div id="wrapper">
-		<!-- Main -->
-		<div id="main">
-			<div class="inner">
-				<!-- Header -->
-				<header id="header">
-					<a href="/Project/main/main.jsp" class="logo"><strong>Main
-							page</strong></a>
-					<ul class="icons">
-						<c:if test="${empty SID}">
-							<li class="btn w3-button" id="login"><b><span>SIGN
-										IN</span></b></a></li>
-						</c:if>
-						<c:if test="${not empty SID}">
-							<li class="btn w3-col" id="logout"><b><span>SIGN
-										OUT</span></b></a></li>
-						</c:if>
-
-					</ul>
-				</header>
+							<!-- Header -->
+								<header id="header">
+									<a href="/Project/main.cls" class="logo"><strong>Main page</strong></a>
+									<ul class="icons">
+									<c:if test="${empty SID}">
+										<li class="btn w3-button" id="login"><b><span>SIGN IN</span></b></li>
+									</c:if>
+									<c:if test="${not empty SID}">
+										<li id="mypage"><b><span>회원 정보</span></b></li>
+										<li id="binfo"><b><span>사업자 정보</span></b></li></a>
+										<li id="pwModi"><b><span>비밀번호 변경</span></b></li>
+										<li class="btn" id="logout"><b><span>SIGN OUT</span></b></li>
+									</c:if>
+									
+									</ul>
+								</header>
 
 				<br> <b><font size="6" color="gray">글쓰기</font></b> <br>
 
