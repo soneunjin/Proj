@@ -26,7 +26,6 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							
 
 							<!-- Header -->
 								<header id="header">
@@ -44,7 +43,7 @@
 									
 									</ul>
 								</header>
-
+								
 							<!-- Banner -->
 								<section id="banner">
 										
@@ -73,6 +72,7 @@
 									<span class="image object">
 										<div class="cont">
 										   <form method="post" action="/Project/member/PassEdit.cls" id="frm" name="frm">
+										   <input type="hidden" id="abc" value="${CNT}">
 										  <div class="form sign-in">
 										    <h2>내 정보 수정</h2>
 										    <label>

@@ -77,20 +77,6 @@ $(document).ready(function() {
     	  $(location).attr('href','/Project/member/passFind.jsp');
       })
       
-      /*
-      $('#findid').mouseover(function(){
-    		$('#findid').addClass('overcolor');
-    		$('#findid').mouseout(function(){
-    			$('#findid').removeClass('overcolor');
-    		})
-      })
-      $('#findpw').mouseover(function(){
-    		$('#findpw').addClass('overcolor');
-    		$('#findpw').mouseout(function(){
-    			$('#findpw').removeClass('overcolor');
-    		})
-      })
-      */
       
       
    // 이메일 체크 정규식
