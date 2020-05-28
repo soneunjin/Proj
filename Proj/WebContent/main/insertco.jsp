@@ -13,53 +13,10 @@
 		<link rel="stylesheet" href="/Project/css/map1.css" />
 		<link rel="stylesheet" href="/Project/css/login1.css">
 		<script type="text/javascript" src="/Project/js/jquery-3.5.0.min.js"></script>
+		<script type="text/javascript" src="/Project/js/main.js"></script>
 		<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=bfbcb2a9b1a94611a8804b0d71d6315c&libraries=services"></script>
 	</head>
-	<script type="text/javascript">
-	$(function(){
-		/*
-		$('#login').click(function(){
-			$(location).attr('href', '/Project/member/login.cls');
-		});
-		
-		$('#logout').click(function(){
-			$(location).attr('href', '/clsProj/member/logoutProc.cls');
-		});
-		*/
-		$('.btn').click(function() {
-			var tid = $(this).attr('id');
-			var url = '';
-			if(tid == 'login') {
-				url = '/Project/member/login.cls';
-			} else if (tid == 'logout') {
-				url = '/Project/member/logoutProc.cls';
-			
-			}
-			
-			$(location).attr('href', url);
-		});
-
-		$('#lbtn').click(function() {
-			$('#frm').submit();
-			
-		});
-		$('#mypage').click(function () {
-			$(location).attr('href','/Project/member/InFoProc.cls');
-			alert('회원정보 페이지로!!!');
-		});
-		
-		$('#pwModi').click(function() {
-			$(location).attr('href','/Project/main/main2.jsp');
-			alert('비밀번호 변경 페이지로!!!')
-		});
-		
-		$('#binfo').click(function () {
-			$(location).attr('href','/Project/main/InsertCo.cls');
-			alert('사업자 등록 페이지로!!!')
-		});
-		
-		
-	});
+<script type="text/javascript">
 </script>
 	<body class="is-preload" >
 		
@@ -172,9 +129,7 @@
 							<!-- Menu -->
 								<nav id="menu">
 									<header class="major">
-							   			<a href="/Project/main.cls">
 							   			<img class="ima_1" src="/Project/images/main.png" border="0" />
-							   			</a>
 										<h2>Manu</h2>
 									</header>
 									<ul>
