@@ -154,35 +154,52 @@
 
 
 
-		<!-- Sidebar -->
-		<div id="sidebar">
-			<div class="inner">
+	<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+							<!-- 
+							<!-- Main link -->
+	
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+							   			<img class="ima_1" src="/Project/images/main.png" border="0" />
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li>
+											<span class="opener">오세용</span>
+											<ul>
+												<li><a href="/Project/info/infoCT.cls">자동차 극장</a></li>
+												<li><a href="/Project/info/infoCP.cls">자동차 캠핌장</a></li>
+												<li><a href="/Project/info/infoDTC.cls">승차 검진소</a></li>
+											</ul>
+										</li>
+										<li><a href="/Project/sales/sales.cls">팝니당</a></li>
+										<li><a href="/Project/review/review.cls">리뷰당?</a></li>
+										<li><a href="/Project/board/board.cls">놀러왕!</a></li>
+										<li><a href="/Project/qna/qnaList.cls">물어봥?</a></li>
+										<!--
+										<li>
+											 <span class="opener">Another Submenu</span>
+											<ul>
+												<li><a href="#">Lorem Dolor</a></li>
+												<li><a href="#">Ipsum Adipiscing</a></li>
+												<li><a href="#">Tempus Magna</a></li>
+												<li><a href="#">Feugiat Veroeros</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Maximus Erat</a></li>
+										<li><a href="#">Sapien Mauris</a></li>
+										<li><a href="#">Amet Lacinia</a></li>
+									</ul> -->
+									</ul>
+								</nav>
 
-				<!-- Search -->
 
+						</div>
+					</div>
 
-				<!-- Menu -->
-				<nav id="menu">
-					<header class="major w3-padding-top">
-						<img class="dtlogo" src="../images/logo.png" width="300px"
-							height="auto"> <a href="main.jsp"><h2>menu</h2></a>
-					</header>
-					<ul>
-						<li><a href="index.html">모른당X</a></li>
-						<li><a href="elements.html">팝니당$</a></li>
-						<li><span class="opener">오세용~</span>
-							<ul>
-								<li><a href="#">자동차극장</a></li>
-								<li><a href="#">자동차캠핑</a></li>
-								<li><a href="#">선별진료소</a></li>
-							</ul></li>
-						<li><a href="#">놀러왕!</a></li>
-						<li><a href="#">물어봥?</a></li>
-
-					</ul>
-				</nav>
 			</div>
-		</div>
-	</div>
 </body>
 </html>

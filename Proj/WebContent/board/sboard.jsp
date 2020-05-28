@@ -41,16 +41,33 @@
 	});
 </script>
 
-<body class="is-preload">
+<body class="is-preload" >
+		
 
+		<!-- Wrapper -->
+			<div id="wrapper">
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							
 
-	<!-- Wrapper -->
-	<div id="wrapper">
-		<!-- Main -->
-		<div id="main">
-			<div class="inner">
-
-				<form method="post" action="" id="frm">
+							<!-- Header -->
+								<header id="header">
+									<a href="/Project/main.cls" class="logo"><strong>Main page</strong></a>
+									<ul class="icons">
+									<c:if test="${empty SID}">
+										<li class="btn w3-button" id="login"><b><span>SIGN IN</span></b></li>
+									</c:if>
+									<c:if test="${not empty SID}">
+										<li id="mypage"><b><span>회원 정보</span></b></li>
+										<li id="binfo"><b><span>사업자 정보</span></b></li></a>
+										<li id="pwModi"><b><span>비밀번호 변경</span></b></li>
+										<li class="btn" id="logout"><b><span>SIGN OUT</span></b></li>
+									</c:if>
+									
+									</ul>
+								</header>
+<form method="post" action="" id="frm">
 					<input type="hidden" name="nowPage" id="nowPage"
 						value="${param.nowPage}"> <input type="hidden" name="bno"
 						id="bno">  <input type="hidden" name="condition"
@@ -63,25 +80,6 @@
 				<form method="post" action="" id="tfrm">
 					<input type="hidden" name="tab" id="tab">
 				</form>
-
-
-				<!-- Header -->
-				<header id="header">
-					<a href="/Project/main/main.jsp" class="logo"><strong>Main
-							page</strong></a>
-					<ul class="icons">
-						<c:if test="${empty SID}">
-							<li class="btn w3-button" id="login"><b><span>SIGN
-										IN</span></b></a></li>
-						</c:if>
-						<c:if test="${not empty SID}">
-							<li class="btn w3-col" id="logout"><b><span>SIGN
-										OUT</span></b></a></li>
-						</c:if>
-
-					</ul>
-				</header>
-
 
 				<div>
 					<br>
@@ -161,33 +159,31 @@
 		</div>
 
 		<!-- Sidebar -->
-		<div id="sidebar">
-			<div class="inner">
-				<!-- 
+					<div id="sidebar">
+						<div class="inner">
+							<!-- 
 							<!-- Main link -->
-
-				<!-- Menu -->
-				<nav id="menu">
-					<header class="major">
-						<a href="/Project/main.jsp" width="0px;" height="0px;"> <img
-							class="ima_1" src="/Project/images/main.png" border="0" />
-						</a>
-						<h2>Manu</h2>
-					</header>
-					<ul>
-						<li><a href="/Project/main.cls">모른당X</a></li>
-						<li><a href="/Project/sales/sales.jsp">팝니당$</a></li>
-						<li><span class="opener">오세용~</span>
-							<ul>
-								<li><a href="#">음식점</a></li>
-								<li><a href="#">자동차 극장</a></li>
-								<li><a href="#">자동차 캠핌장</a></li>
-								<li><a href="#">주차장 정보</a></li>
-								<li><a href="#"></a></li>
-							</ul></li>
-						<li><a href="/Project/board/board.cls">놀러왕!</a></li>
-						<li><a href="/Project/board/board.jsp">물어봥?</a></li>
-						<!--
+	
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+							   			<img class="ima_1" src="/Project/images/main.png" border="0" />
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li>
+											<span class="opener">오세용</span>
+											<ul>
+												<li><a href="/Project/info/infoCT.cls">자동차 극장</a></li>
+												<li><a href="/Project/info/infoCP.cls">자동차 캠핌장</a></li>
+												<li><a href="/Project/info/infoDTC.cls">승차 검진소</a></li>
+											</ul>
+										</li>
+										<li><a href="/Project/sales/sales.cls">팝니당</a></li>
+										<li><a href="/Project/review/review.cls">리뷰당?</a></li>
+										<li><a href="/Project/board/board.cls">놀러왕!</a></li>
+										<li><a href="/Project/qna/qnaList.cls">물어봥?</a></li>
+										<!--
 										<li>
 											 <span class="opener">Another Submenu</span>
 											<ul>
@@ -201,24 +197,13 @@
 										<li><a href="#">Sapien Mauris</a></li>
 										<li><a href="#">Amet Lacinia</a></li>
 									</ul> -->
-					</ul>
-				</nav>
+									</ul>
+								</nav>
 
-				<!-- Section -->
-				<section>
-					<header class="major"> </header>
-				</section>
 
-				<!-- Section -->
+						</div>
+					</div>
 
 			</div>
-		</div>
-
-	</div>
-	<!-- Section -->
-	<section>
-		<header class="major"> </header>
-	</section>
-
 </body>
 </html>
