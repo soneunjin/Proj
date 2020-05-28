@@ -25,32 +25,36 @@
 <script type="text/javascript" src="/Project/js/login.js"></script>
 </head>
 <body class="is-preload">
-<div id="wrapper">
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-							
+	<div id="wrapper">
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
 
-							<!-- Header -->
-								<header id="header">
-									<a href="/Project/main.cls" class="logo"><strong>Main page</strong></a>
-									<ul class="icons">
-									<c:if test="${empty SID}">
-										<li class="btn w3-button" id="login"><b><span>SIGN IN</span></b></li>
-									</c:if>
-									<c:if test="${not empty SID}">
-										<li id="mypage"><b><span>회원 정보</span></b></li>
-										<li id="binfo"><b><span>사업자 정보</span></b></li></a>
-										<li id="pwModi"><b><span>비밀번호 변경</span></b></li>
-										<li class="btn" id="logout"><b><span>SIGN OUT</span></b></li>
-									</c:if>
-									
-									</ul>
-								</header>
+
+				<!-- Header -->
+				<header id="header">
+					<a href="/Project/main.cls" class="logo"><strong>Main
+							page</strong></a>
+					<ul class="icons">
+						<c:if test="${empty SID}">
+							<li class="btn w3-button" id="login"><b><span>SIGN
+										IN</span></b></li>
+						</c:if>
+						<c:if test="${not empty SID}">
+							<li id="mypage"><b><span>회원 정보</span></b></li>
+							<li id="binfo"><b><span>사업자 정보</span></b></li>
+							</a>
+							<li id="pwModi"><b><span>비밀번호 변경</span></b></li>
+							<li class="btn" id="logout"><b><span>SIGN OUT</span></b></li>
+						</c:if>
+
+					</ul>
+				</header>
 
 				<br> <b><font size="6" color="gray">글쓰기</font></b> <br>
 
-				<form id ="frm" method="post" action="/Project/board/boardWriteProc.cls" >
+				<form id="frm" method="post"
+					action="/Project/board/boardWriteProc.cls">
 					<input type="hidden" name="board_id"
 						value="${sessionScope.sessionID}">
 					<table width="700" border="3" bordercolor="lightgray"
@@ -60,23 +64,24 @@
 							<td>${SID}</td>
 						</tr>
 						<tr>
-							<td >제 목
-							<td><select id = "cate" style="width: 200px " name="cate">
+							<td>제 목
+							<td><select id="cate" style="width: 200px" name="cate">
 									<option value="공지">공지</option>
 									<option value="팁">팁</option>
 									<option value="이벤트">이벤트</option>
-							<input name="title" type="text" size="30" id="title" ></select></td>
+									<input name="title" type="text" size="30" id="title">
+							</select></td>
 						</tr>
 						<tr>
-							<td >내 용</td>
+							<td>내 용</td>
 							<td><textarea id="body" name="body" cols="72" rows="20"></textarea>
 							</td>
 						</tr>
 
 						<tr align="center" valign="middle">
-							<td colspan="5"><input type="reset" id = "hbtn" value="작성취소"> <input
-								type="button" id = "wbtn" value="등록"> <input type="button" id = "bdh" 
-								value="목록"></td>
+							<td colspan="5"><input type="reset" id="hbtn" value="작성취소">
+								<input type="button" id="wbtn" value="등록"> <input
+								type="button" id="bdh" value="목록"></td>
 						</tr>
 					</table>
 				</form>
@@ -86,31 +91,27 @@
 
 
 		<!-- Sidebar -->
-					<div id="sidebar">
-						<div class="inner">
-							<!-- 
+		<div id="sidebar">
+			<div class="inner">
+				<!-- 
 							<!-- Main link -->
-	
-							<!-- Menu -->
-								<nav id="menu">
-									<header class="major">
-							   			<img class="ima_1" src="/Project/images/main.png" border="0" />
-										<h2>Menu</h2>
-									</header>
-									<ul>
-										<li>
-											<span class="opener">오세용</span>
-											<ul>
-												<li><a href="/Project/info/infoCT.cls">자동차 극장</a></li>
-												<li><a href="/Project/info/infoCP.cls">자동차 캠핌장</a></li>
-												<li><a href="/Project/info/infoDTC.cls">승차 검진소</a></li>
-											</ul>
-										</li>
-										<li><a href="/Project/sales/sales.cls">팝니당</a></li>
-										<li><a href="/Project/review/review.cls">리뷰당?</a></li>
-										<li><a href="/Project/board/board.cls">놀러왕!</a></li>
-										<li><a href="/Project/qna/qnaList.cls">물어봥?</a></li>
-										<!--
+
+				<!-- Menu -->
+				<nav id="menu">
+					<header class="major">
+						<a href="/Project/main.cls" width="0px;" height="0px;"> <img
+							class="ima_1" src="/Project/images/main.png" border="0" />
+							<h2>Menu</h2>
+					</header>
+					<ul>
+						<li><a class="opener" href="/Project/info/infoCT.cls">오세용</a>
+
+						</li>
+						<li><a href="/Project/sales/sales.cls">팝니당</a></li>
+						<li><a href="/Project/review/review.cls">리뷰당?</a></li>
+						<li><a href="/Project/board/board.cls">놀러왕!</a></li>
+						<li><a href="/Project/qna/qnaList.cls">물어봥?</a></li>
+						<!--
 										<li>
 											 <span class="opener">Another Submenu</span>
 											<ul>
@@ -124,13 +125,13 @@
 										<li><a href="#">Sapien Mauris</a></li>
 										<li><a href="#">Amet Lacinia</a></li>
 									</ul> -->
-									</ul>
-								</nav>
+					</ul>
+				</nav>
 
-
-						</div>
-					</div>
 
 			</div>
+		</div>
+
+	</div>
 </body>
 </html>

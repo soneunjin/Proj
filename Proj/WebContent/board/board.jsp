@@ -38,6 +38,14 @@
 			$('#frm').attr('action', '/Project/board/board.cls');
 			$('#frm').submit();
 		});
+		$('.content').hover(function() {
+			$(this).css("color", "brown")
+			$(this).css("font-weight", "bold")
+
+		}, function() {
+			$(this).css("color", "gray");
+			$(this).css("font-weight", "")
+		});
 
 		window.addEventListener("keydown", function(event) {
 			if (event.defaultPrevented) {
@@ -190,17 +198,14 @@
 							<!-- Menu -->
 								<nav id="menu">
 									<header class="major">
+										<a href="/Project/main.cls" width="0px;" height="0px;"> 
 							   			<img class="ima_1" src="/Project/images/main.png" border="0" />
 										<h2>Menu</h2>
 									</header>
 									<ul>
 										<li>
-											<span class="opener">오세용</span>
-											<ul>
-												<li><a href="/Project/info/infoCT.cls">자동차 극장</a></li>
-												<li><a href="/Project/info/infoCP.cls">자동차 캠핌장</a></li>
-												<li><a href="/Project/info/infoDTC.cls">승차 검진소</a></li>
-											</ul>
+											<a class="opener" href="/Project/info/infoCT.cls">오세용</a>
+										
 										</li>
 										<li><a href="/Project/sales/sales.cls">팝니당</a></li>
 										<li><a href="/Project/review/review.cls">리뷰당?</a></li>

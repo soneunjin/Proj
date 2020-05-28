@@ -3,15 +3,8 @@
  */
 
 $(document).ready(function() {
-	
-	$('.content').hover(function() {
-		$(this).css("color", "brown")
-		$(this).css("font-weight", "bold")
 
-	}, function() {
-		$(this).css("color", "gray");
-		$(this).css("font-weight", "")
-	});
+
 	$('.content').click(function() {
 		// 할일
 		// 글 번호 알아낸다.
@@ -21,6 +14,14 @@ $(document).ready(function() {
 		$('#frm').attr('action', '/Project/board/boardDetail.cls');
 		$('#frm').submit();
 
+	});
+	$('.content').hover(function() {
+		$(this).css("color", "brown")
+		$(this).css("font-weight", "bold")
+
+	}, function() {
+		$(this).css("color", "gray");
+		$(this).css("font-weight", "")
 	});
 
 
