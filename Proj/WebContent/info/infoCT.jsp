@@ -193,9 +193,7 @@
 					$('#map2').css('display', '');
 					$('#map1').css('display', 'none');
 					var name = $(this).children().html();
-					alert(name);
 					var ii = $(this).children().attr('id');
-					alert(ii);
 					
 					$.ajax({
 						url: "/Project/ajax/infoDetail.ck",
@@ -207,21 +205,16 @@
 						success: function(obj){
 							$('.detail').css('display', '');
 							var name = obj.name;
-							alert(name);
 							var tel = obj.tel;
-							alert(tel);
 							var addr = obj.addr;
-							alert(addr);
 							var price = obj.price;
-							alert(price);
 							var link = obj.link;
-							alert(link);
 							$('#ctname').html(name);
 							$('#cttel').html(tel);
 							$('#ctaddr').html(addr);
 							$('#ctpri').html(price);
 							$('#hplink').attr('href', link);
-							$('#search').attr('href','https://map.kakao.com/link/search/' + name);
+							$('#search').attr('href','https://map.kakao.com/link/search/' + addr);
 						},
 						error: function(){
 							alert('통신에러!!!');

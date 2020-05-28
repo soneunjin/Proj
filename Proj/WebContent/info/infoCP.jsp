@@ -188,9 +188,7 @@
 					$('#map2').css('display', '');
 					$('#map1').css('display', 'none');
 					var name = $(this).children().html();
-					alert(name);
 					var ii = $(this).children().attr('id');
-					alert(ii);
 					
 					$.ajax({
 						url: "/Project/ajax/infoDetail.ck",
