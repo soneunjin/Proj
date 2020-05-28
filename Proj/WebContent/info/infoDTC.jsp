@@ -42,7 +42,7 @@
 
 							<!-- Banner -->
 								<section id="banner">
-									<div class="" style="overflow:scroll; width:400px; height: 500px; padding:0px;">
+									<div class="" style="overflow:scroll; width:350px; height: 500px; padding:0px;">
 										<header>
 											<h2><b>선별진료소 위치 정보</b></h2><br>
 											<p></p>
@@ -61,8 +61,8 @@
 										 
 										 -->
 									<div class="image object" >
-										<div id="map1" style="width: 700px;height:500px; margin-left: -50px;"></div>
-										<div id="map2" style="width: 700px;height:500px; margin-left: -50px;"></div>
+										<div id="map1" style="width: 600px;height:500px; margin-left: -50px;"></div>
+										<div id="map2" style="width: 600px;height:500px; margin-left: -50px;"></div>
 									</div>	
 									<div class="detail" style="margin-left: -50px;">
 											<!-- <img class="w3-border w3-card" style="width: 350px; height: 350px; float: left; margin-right: 15px;" id="img1" src="../images/dtc_photo.jpg" alt="Image">  -->
