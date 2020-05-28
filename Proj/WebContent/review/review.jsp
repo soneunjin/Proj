@@ -23,7 +23,7 @@
 				url = '/Project/member/logoutProc.cls';
 			
 			}
-		});
+		}); 
 		$('.rbtn').click(function(){
 			var rno = $(this).parents('div').attr('id');
 			alert(rno);

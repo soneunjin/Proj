@@ -22,7 +22,7 @@ public class ReviewDAO {
 		db = new WebDBCP();
 		rSQL = new ReviewSQL();
 	}
-	
+	 
 	// 리뷰 리스트 조회
 	public ArrayList<ReviewVO> getReList(PageUtil page){
 		ArrayList<ReviewVO> list = new ArrayList<ReviewVO>();

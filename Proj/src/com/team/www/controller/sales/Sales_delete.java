@@ -19,5 +19,5 @@ public class Sales_delete implements ClsController {
 		sDAO.deleteData(spno);
 		return view;
 	}
-
+ 
 }

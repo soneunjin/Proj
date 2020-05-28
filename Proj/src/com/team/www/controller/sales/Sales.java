@@ -11,7 +11,7 @@ import com.team.www.util.PageUtil;
 import com.team.www.vo.SalesVO;
 
 public class Sales implements ClsController {
-
+ 
 	@Override
 	public String exec(HttpServletRequest req, HttpServletResponse resp) {
 		String view = "/sales/sales.jsp";

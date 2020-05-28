@@ -46,7 +46,7 @@
 				   $('#frm1').submit();
 			   });
 			   
-		   });
+		   }); 
 	</script>
 	<!-- Wrapper -->
 	<div id="wrapper">

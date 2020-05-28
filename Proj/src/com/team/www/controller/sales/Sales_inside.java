@@ -12,7 +12,7 @@ import com.team.www.vo.FileVO;
 import com.team.www.vo.SalesVO;
 
 public class Sales_inside implements ClsController {
-
+ 
 	@Override
 	public String exec(HttpServletRequest req, HttpServletResponse resp) {
 		String view = "/sales/sales_inside.jsp";

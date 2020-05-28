@@ -7,7 +7,7 @@ import com.team.www.controller.ClsController;
 import com.team.www.dao.SalesDAO;
 
 public class Sales_modify implements ClsController {
-
+ 
 	@Override
 	public String exec(HttpServletRequest req, HttpServletResponse resp) {
 		String view = "/sales/sales_modify.jsp";

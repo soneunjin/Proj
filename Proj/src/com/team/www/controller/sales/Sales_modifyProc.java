@@ -7,7 +7,7 @@ import com.team.www.controller.ClsController;
 import com.team.www.dao.SalesDAO;
 
 public class Sales_modifyProc implements ClsController {
-
+ 
 	@Override
 	public String exec(HttpServletRequest req, HttpServletResponse resp) {
 		String view = "/Project/sales/sales.cls";

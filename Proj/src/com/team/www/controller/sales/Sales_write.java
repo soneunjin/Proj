@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.team.www.controller.ClsController;
 
 public class Sales_write implements ClsController {
-
+ 
 	@Override
 	public String exec(HttpServletRequest req, HttpServletResponse resp) {
 		String view = "/sales/sales_write.jsp";

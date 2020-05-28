@@ -18,7 +18,7 @@ public class SalesSQL {
 	
 	public String getSQL(int code) {
 		StringBuffer buff = new StringBuffer();
-		switch(code) {
+		switch(code) { 
 		case SAL_LIST:
 			buff.append("SELECT ");
 			buff.append("    ee.rno, ee.pno, ee.ptt, ee.bceo, ee.today, ee.bcnt ");

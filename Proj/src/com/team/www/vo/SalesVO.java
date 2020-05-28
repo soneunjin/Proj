@@ -14,7 +14,7 @@ public class SalesVO {
 	
 	
 	public String getCarct() {
-		return carct;
+		return carct; 
 	}
 	public void setCarct(String carct) {
 		this.carct = carct;

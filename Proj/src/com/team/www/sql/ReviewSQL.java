@@ -9,7 +9,7 @@ public class ReviewSQL {
 	
 	public String getSQL(int code) {
 		StringBuffer buff = new StringBuffer();
-		switch(code) {
+		switch(code) { 
 		case RE_LIST:
 			buff.append("SELECT "); 
 			buff.append("	ee.rrno, rno, memid, ptt, rtt, rbd, memno, rst "); 

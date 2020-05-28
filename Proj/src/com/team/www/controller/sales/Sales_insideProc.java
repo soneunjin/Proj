@@ -9,7 +9,7 @@ import com.team.www.vo.FileVO;
 import com.team.www.vo.SalesVO;
 
 public class Sales_insideProc implements ClsController {
-
+ 
 	@Override
 	public String exec(HttpServletRequest req, HttpServletResponse resp) {
 		String view = "/sales/salesRelay.jsp";

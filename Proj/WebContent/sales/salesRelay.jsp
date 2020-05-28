@@ -14,7 +14,7 @@
 			$('#frm').submit();
 	});
 </script>
-</head>
+</head> 
 <body>
 	<form method="post" action="/Project/sales/sales_inside.cls" id="frm">
 		<input type="hidden" name="pno"  value="${PNO}">

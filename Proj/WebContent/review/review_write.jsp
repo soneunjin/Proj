@@ -22,7 +22,7 @@
 			} else if (tid == 'logout') {
 				url = '/Project/member/logoutProc.cls';
 			
-			}
+			} 
 		   });
 		$('#submit').click(function(){
 			var pno = $('#ppno').val();

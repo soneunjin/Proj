@@ -12,7 +12,7 @@ public class ReviewVO {
 		return rno;
 	}
 	public void setRno(int rno) {
-		this.rno = rno;
+		this.rno = rno; 
 	}
 	public int getPno() {
 		return pno;

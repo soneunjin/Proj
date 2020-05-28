@@ -13,7 +13,7 @@ public class FileVO {
 	
 	
 	public String getImgrut() {
-		return imgrut;
+		return imgrut; 
 	}
 	public void setImgrut(String imgrut) {
 		this.imgrut = imgrut;

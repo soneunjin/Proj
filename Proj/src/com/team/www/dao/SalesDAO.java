@@ -28,7 +28,7 @@ public class SalesDAO {
 		db = new WebDBCP();
 		sSQL = new SalesSQL();
 	}
-	
+	 
 	public int getTotal() {
 		int cnt = 0;
 		con = db.getCon();

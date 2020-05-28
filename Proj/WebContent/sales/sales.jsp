@@ -16,7 +16,7 @@
 </head>
 <script type="text/javascript">
 	$(function(){
-		
+		 
 		$('.btn').click(function() {
 			var tid = $(this).attr('id');
 			var url = '';

@@ -25,7 +25,7 @@
 				url = '/Project/member/login.cls';
 			} else if (tid == 'logout') {
 				url = '/Project/member/logoutProc.cls';
-			
+			 
 			}
 	   });
 	   $('#save').click(function(){
