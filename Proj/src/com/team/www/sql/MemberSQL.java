@@ -75,22 +75,36 @@ public class MemberSQL {
 			buff.append("	AND memid = ? ");
 			break;
 			
+//		case SEL_TEN:
+//			buff.append("SELECT ");
+//			buff.append("	p.bno bno, rd, bname, bloc ");
+//			buff.append("FROM ");
+//			buff.append("	promotion p, boss b, ");
+//			buff.append("	(SELECT ");
+//			buff.append("		r.pno, avg(rst) rd ");
+//			buff.append("	 FROM ");
+//			buff.append("		promotion, review r ");
+//			buff.append("	 GROUP BY ");
+//			buff.append("		r.pno) e ");
+//			buff.append("WHERE ");
+//			buff.append("	e.pno = p.pno ");
+//			buff.append("	and p.bno = b.bno ");
+//			buff.append("ORDER BY ");
+//			buff.append(" rd DESC ");
+//			break;
+//			
 		case SEL_TEN:
-			buff.append("SELECT ");
-			buff.append("	p.bno bno, rd, bname, bloc ");
-			buff.append("FROM ");
-			buff.append("	promotion p, boss b, ");
-			buff.append("	(SELECT ");
-			buff.append("		r.pno, avg(rst) rd ");
-			buff.append("	 FROM ");
-			buff.append("		promotion, review r ");
-			buff.append("	 GROUP BY ");
-			buff.append("		r.pno) e ");
-			buff.append("WHERE ");
-			buff.append("	e.pno = p.pno ");
-			buff.append("	and p.bno = b.bno ");
-			buff.append("ORDER BY ");
-			buff.append(" rd DESC ");
+			buff.append("SELECT "); 
+			buff.append("    b.bname, p.bno, avg(r.rst) rd, bloc "); 
+			buff.append("FROM "); 
+			buff.append("    PROMOTION p, review r, BOSS b "); 
+			buff.append("WHERE "); 
+			buff.append("    p.pno = r.pno AND "); 
+			buff.append("    p.bno = b.bno "); 
+			buff.append("GROUP BY "); 
+			buff.append("    b.bname, p.bno, bloc "); 
+			buff.append("Order BY "); 
+			buff.append("    rd desc ");
 			break;
 			
 		case SEL_MAIN:

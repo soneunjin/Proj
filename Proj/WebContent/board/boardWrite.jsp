@@ -41,10 +41,7 @@
 										IN</span></b></li>
 						</c:if>
 						<c:if test="${not empty SID}">
-							<li id="mypage"><b><span>회원 정보</span></b></li>
-							<li id="binfo"><b><span>사업자 정보</span></b></li>
-							</a>
-							<li id="pwModi"><b><span>비밀번호 변경</span></b></li>
+
 							<li class="btn" id="logout"><b><span>SIGN OUT</span></b></li>
 						</c:if>
 
@@ -66,7 +63,9 @@
 						<tr>
 							<td>제 목
 							<td><select id="cate" style="width: 200px" name="cate">
+							<c:if test="${SID eq 'sej0267@naver.com'}">
 									<option value="공지">공지</option>
+									</c:if>
 									<option value="팁">팁</option>
 									<option value="이벤트">이벤트</option>
 									<input name="title" type="text" size="30" id="title">

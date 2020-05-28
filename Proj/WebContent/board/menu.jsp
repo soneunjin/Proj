@@ -32,11 +32,14 @@
 	});
 </script>
 </head>
-<body  class="w3-khaki">
+<body  class=" w3-khaki"><c:if test="${SID eq DATA.memid}">
 	<div style="width: 200px" class = " w3-center w3-container w3-center w3-half w3-margin w3-padding">
 		<input class = "edt" type="button" value="수정" >	<input class = "del" type="button" value="삭제" > 		
 			
-	</div>
+	</div></c:if>
+	<c:if test="${SID ne DATA.memid}">
+	<h2 class="w3-center w3-red">계정이 다릅니다.
+	</h2></c:if>
 					<form method="post" action="" id="cmfrm">
 						<input type="hidden" name="no" id="no" value="${bdno}">
 						<input type="hidden" name="bd" id="bd" value="${cobd}">

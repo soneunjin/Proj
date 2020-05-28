@@ -58,10 +58,6 @@
 										IN</span></b></li>
 						</c:if>
 						<c:if test="${not empty SID}">
-							<li id="mypage"><b><span>회원 정보</span></b></li>
-							<li id="binfo"><b><span>사업자 정보</span></b></li>
-							</a>
-							<li id="pwModi"><b><span>비밀번호 변경</span></b></li>
 							<li class="btn" id="logout"><b><span>SIGN OUT</span></b></li>
 						</c:if>
 
