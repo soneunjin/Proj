@@ -64,7 +64,7 @@
 										<li id="mypage"><b><span>회원 정보</span></b></li>
 										<li id="binfo"><b><span>사업자 정보</span></b></li></a>
 										<li id="pwModi"><b><span>비밀번호 변경</span></b></li>
-										<li id="logout"><b><span>SIGN OUT</span></b></li>
+										<li class="btn" id="logout"><b><span>SIGN OUT</span></b></li>
 									</c:if>
 									
 									</ul>
@@ -72,7 +72,7 @@
 
 							<!-- Banner -->
 							<section id="banner">
-									<div class="" style="overflow:scroll; width:400px; height: 500px; padding:0px;">
+									<div class="" style="overflow:scroll; width:380px; height: 620px; padding:0px;">
 										<header>
 											<h2><b> 내주변 위치 정보</b></h2><br>
 											<p></p>
@@ -91,7 +91,7 @@
 										 
 										 -->
 									<div class="image object" >
-										<div id="map2" style="width: 700px;height:500px; margin-left: -50px;"></div>
+										<div id="map2" style="width: 973px;height:620px; margin-left: -50px;"></div>
 									</div>	
 								
 									</section>
@@ -172,7 +172,7 @@
 			$(function(){
 				var mapContainer = document.getElementById('map2');
 				var mapOption = {
-				    center: new kakao.maps.LatLng(37.517274, 126.981174), // 지도의 중심좌표
+				    center: new kakao.maps.LatLng(37.4821113, 126.8992314), // 지도의 중심좌표
 				    level: 3 // 지도의 확대 레벨
 				}// 지도를 표시할 div 
 				

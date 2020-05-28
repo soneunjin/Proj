@@ -10,7 +10,7 @@ public class PassEdit implements ClsController {
 
 	@Override
 	public String exec(HttpServletRequest req, HttpServletResponse resp) {
-		String view = "/main/main.jsp";
+		String view = "/main.cls";
 		
 		String sid = (String) req.getSession().getAttribute("SID");
 		MemberDAO mDAO = new MemberDAO();
