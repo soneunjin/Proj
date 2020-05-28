@@ -35,6 +35,8 @@
 	   
 	   $('#list').click(function(){
 		   $(location).attr('href', '/Project/sales/sales.cls');
+	   });
+   });
    });
 </script>
 </head>
