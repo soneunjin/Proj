@@ -16,9 +16,13 @@
 </head>
 <script type="text/javascript">
 	$(function(){
-		 
+		$('.opener').click(function(){
+			$(location).attr('href', '/Project/info/infoCT.cls');
+		});
+		
 		$('.btn').click(function() {
 			var tid = $(this).attr('id');
+			alert(tid);
 			var url = '';
 			if(tid == 'login') {
 				url = '/Project/member/login.cls';
@@ -35,6 +39,7 @@
 			$('#frm').attr('action', '/Project/sales/sales_insideProc.cls');
 			$('#frm').submit();
 		});
+		
 		$('.pbtn').click(function(){
 			var str = $(this).text();
 			$('#nowPage').val(str);
@@ -68,16 +73,14 @@
          <div class="inner">
             <!-- Header -->
             <header id="header">
-               <a href="/Project/main.cls" class="logo"><strong>Editorial</strong> by
-                  HTML5 UP</a>
+               <a href="/Project/sales/sales.cls" class="logo"><strong>Sales Page</strong></a>
 
                <div class="icons">
-                  <a href="/Project/login.cls" class="">
                   	<c:if test="${empty SID}">
 						<div class="btn w3-button" id="login"><b><span>SIGN IN</span></b></a></div>
 					</c:if>
 					<c:if test="${not empty SID}">
-						<div class="btn w3-col" id="logout"><b><span>SIGN OUT</span></b></a></div>
+						<div class="btn w3-button" id="logout"><b><span>SIGN OUT</span></b></a></div>
 					</c:if>
                </div>
             </header>
@@ -142,24 +145,22 @@
             <!-- Menu -->
             <nav id="menu">
 					<header class="major">
-						<a href="/Project/main.cls" width="0px;" height="0px;"> 
 						<img class="ima_1" src="/Project/images/main.png" border="0" />
-						</a>
 						<h2>Menu</h2>
 					</header>
 				<ul>
-					<li><a href="/Project/sales/sales.cls">팝니당$</a></li>
 					<li>
-						<span class="opener">오세용~</span>
+						<span class="opener">오세용</span>
 						<ul>
 							<li><a href="/Project/info/infoCT.cls">자동차 극장</a></li>
 							<li><a href="/Project/info/infoCP.cls">자동차 캠핌장</a></li>
 							<li><a href="/Project/info/infoDTC.cls">진료소 정보</a></li>
 						</ul>
 					</li>
-					<li><a href="/Project/board/board.cls">놀러왕!</a></li>
-					<li><a href="/Project/qna/qnaList.cls">물어봥?</a></li>
-					<li><a href="/Project/review/review.cls">리뷰당?</a></li>
+					<li><a href="/Project/sales/sales.cls">팝니당</a></li>
+					<li><a href="/Project/review/review.cls">리뷰당</a></li>
+					<li><a href="/Project/board/board.cls">놀러왕</a></li>
+					<li><a href="/Project/qna/qnaList.cls">물어봥</a></li>
                </ul>
             </nav>
          </div>

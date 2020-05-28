@@ -42,9 +42,9 @@
 
 							<!-- Banner -->
 								<section id="banner">
-									<div class="" style="overflow:scroll; width:350px; height: 500px; padding:0px;">
+									<div class="" style="overflow:scroll; width:300px; height: 500px; padding:0px;">
 										<header>
-											<h2><b>자동차 극장 위치 정보</b></h2><br>
+											<h3><b>자동차 극장 위치 정보</b></h3><br>
 											<p></p>
 										</header>
 										<p class="list">
@@ -60,9 +60,9 @@
 											<li><a href="#" class="button big">Learn More</a></li>
 										 
 										 -->
-									<div class="image object" >
-										<div id="map1" style="width: 650px;height:500px; margin-left: -50px;"></div>
-										<div id="map2" style="width: 650px;height:500px; margin-left: -50px;"></div>
+									<div class="image object" style="width: 500px; margin-right: 20px;">
+										<div id="map1" style="width: 500px;height:500px; margin-left: -50px;"></div>
+										<div id="map2" style="width: 500px;height:500px; margin-left: -50px;"></div>
 									</div>	
 									<div class="detail" style="margin-left: -50px;">
 											<!-- <img class="w3-border w3-card" style="width: 350px; height: 350px; float: left; margin-right: 15px;" id="img1" src="../images/ctt_photo.jpg" alt="Image">  -->
@@ -104,17 +104,17 @@
 										<h2>Menu</h2>
 									</header>
 									<ul>
-									<li><span class="opener">오세용!</span>
+									<li><span class="opener">오세용</span>
 										<ul>
 											<li><a href="/Project/info/infoCT.cls">자동차극장</a></li>
 											<li><a href="/Project/info/infoCP.cls">자동차캠핑</a></li>
 											<li><a href="/Project/info/infoDTC.cls">승차검진소</a></li>
 										</ul>
 									</li>
-									<li><a href="/Project/sales/sales.cls">팝니당!</a></li>
-									<li><a href="/Project/review/review.cls">리뷰당!</a></li>
-									<li><a href="/Project/board/board.cls">놀러왕!</a></li>
-									<li><a href="/Project/qna/qnaList.cls">물어봥?</a></li>
+									<li><a href="/Project/sales/sales.cls">팝니당</a></li>
+									<li><a href="/Project/review/review.cls">리뷰당</a></li>
+									<li><a href="/Project/board/board.cls">놀러왕</a></li>
+									<li><a href="/Project/qna/qnaList.cls">물어봥</a></li>
 									</ul>
 										<!--
 										<li>

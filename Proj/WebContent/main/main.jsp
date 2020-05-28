@@ -52,7 +52,7 @@
 										</header>
 										<p class="list">
 											<c:forEach var="data" items="${LIST}">
-											   <span class="loc" style="font-size: 15pt;"><span id="${data.bloc}">${data.bname} : </span></span>
+											   <span class="loc" style="font-size: 15pt;"><span id="${data.bloc}">${data.bname}</span></span>
 											   <span style="color: orange;">별점: ★${data.rd}</span><br><br>
 											</c:forEach>
 										</p>

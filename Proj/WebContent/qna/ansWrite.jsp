@@ -25,6 +25,10 @@
        
 <script type="text/javascript">
         $(function(){
+        	$('#ima_1').click(function(){
+        		$(location).attr('href','/Project/main.cls');
+        	});
+        	
         	$('.logo').click(function(){
         		$(location).attr('href','/Project/qna/qnaList.cls');
         	});
@@ -42,9 +46,7 @@
         		$(location).attr('href','/Project/qna/qnaList.cls');
         	});
         	
-        	$('.dtlogo').click(function(){
-        		$(location).attr('href','/Project/main.cls');
-        	});
+        	
         	
         	$('#sbbtn').click(function(){
         		alert('글등록');
@@ -137,8 +139,8 @@
 			</div>
 		</div>
 		<!-- Sidebar -->
-		<div id="sidebar">
-			<div class="inner">
+		<div id="sidebar" style="width: 350px;">
+			<div class="inner" style="width: 350px;">
 
 				<!-- Search -->
 

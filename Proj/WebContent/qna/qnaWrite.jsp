@@ -169,8 +169,8 @@
 			</div>
 		</div>
 		<!-- Sidebar -->
-		<div id="sidebar">
-			<div class="inner">
+		<div id="sidebar" style="width: 350px;">
+			<div class="inner" style="width: 350px;">
 
 				<!-- Search -->
 
@@ -178,7 +178,7 @@
 				<!-- Menu -->
 				<nav id="menu">
 									<header class="major">
-							   				<img class="ima_1" src="../images/main.png" border="0" />
+							   				<img class="ima_1 dtlogo" src="../images/main.png" border="0" />
 							   			<a></a>
 										<h2>Menu</h2>
 									</header>

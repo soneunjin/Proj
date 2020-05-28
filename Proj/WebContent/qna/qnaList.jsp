@@ -106,7 +106,6 @@
                       
 				</header>
 
-	<body>
 				<form method="post" action="" id="frm">
 					<input type="hidden" name="nowPage" id="nowPage" value="${param.nowPage}">
 					<input type="hidden" name="sid" id="sid" value="${SID}">
@@ -115,7 +114,7 @@
 					<input type="hidden" name="sid" id="sid1" value="">
 					<input type="hidden" name="qqno" id="qqno">
 				</form>
-					<div id="wrap" >
+					<div id="wrap" style="width: 1000px;">
 						<br>
 						<div id="topForm">
 							<div class="w3-center ftt" >Q&A</div>
@@ -202,19 +201,17 @@
 						</div>
 					</div>
 
-				</body>
-
 			</div>
 		</div>
 		<!-- Sidebar -->
-		<div id="sidebar">
-			<div class="inner">
+		<div id="sidebar" style="width: 350px;">
+			<div class="inner" style="width: 350px;">
 
 				<!-- Search -->
 
 
 				<!-- Menu -->
-					<nav id="menu">
+					<nav id="menu" style="width: 300px;">
 									<header class="major">
 							   				<img class="ima_1" src="../images/main.png" border="0" id="dtlogo"/>
 							   			<a></a>
@@ -238,6 +235,5 @@
 			</div>
 		</div>
 	</div>
-
 </body>
 </html>

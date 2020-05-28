@@ -113,6 +113,7 @@ $(function(){
 	});
 });
 </script>
+
 <body class="is-preload">
 
 	<!-- Wrapper -->
@@ -135,9 +136,7 @@ $(function(){
 
 				</header>
 
-				<head>
-				</head>
-				<div id="wrap">
+				<div id="wrap" style="width: 1000px;">
 					<br> <br>
 					<div id="board">
 						<form method="post" action="" id="ddfrm">
@@ -323,8 +322,9 @@ $(function(){
 			</div>
 		</div>
 		<!-- Sidebar -->
-		<div id="sidebar">
-			<div class="inner">
+		<div id="sidebar" style="width: 350px;">
+		
+			<div class="inner" style="width: 350px;">
 
 				<!-- Search -->
 
