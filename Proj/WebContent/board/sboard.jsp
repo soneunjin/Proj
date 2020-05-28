@@ -95,7 +95,7 @@
 				<div>
 					<br>
 					<div id="topForm">
-						<div class="w3-center ftt">자유게시판</div>
+						<div class="w3-center w3-text-green ftt">자유게시판</div>
 						<c:if test="${sessionScope.sessionID!=null}">
 						</c:if>
 
