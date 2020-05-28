@@ -19,32 +19,16 @@
 <script type="text/javascript" src="/Project/js/jquery-3.5.0.min.js"></script>
 <script type="text/javascript" src="/Project/js/login.js"></script>
 </head>
-<body class="is-preload">
-
-	<!-- Wrapper -->
-	<div id="wrapper">
-		<!-- Main -->
-		<div id="main">
-			<div class="inner">
-				<!-- Header -->
-				<header id="header">
-	
-                           <a href="/Project/main.cls" class="logo"><strong>Main page</strong></a>
-                           <ul class="icons">
-                           <c:if test="${empty SID}">
-                              <li><a href="/Project/member/login.jsp" class="w3-col"><b><span>SIGN IN</span></b></a></li>
-                           </c:if>
-                              <li><a href="/Project/member/logoutProc.cls" class="w3-col"><b><span>SIGN OUT</span></b></a></li>
-                           </ul>
-				</header>
-
-				<head>
 
 <style type="text/css">
 </style>
 
 <script type="text/javascript">
         $(function(){
+        	$('.logo').click(function(){
+        		$(location).attr('href','/Project/qna/qnaList.cls');
+        	});
+        	
         	$('.opener').click(function(){
         		$(location).attr('href','/Project/info/infoCT.cls');
         	});
@@ -85,8 +69,26 @@
         	});
         });
     </script>
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+				<!-- Header -->
+				<header id="header">
 	
-				</head>
+                           <a class="logo"><strong>Q&A page</strong></a>
+                           <ul class="icons">
+                           <c:if test="${empty SID}">
+                              <li><a href="/Project/member/login.jsp" class="w3-col"><b><span>SIGN IN</span></b></a></li>
+                           </c:if>
+                              <li><a href="/Project/member/logoutProc.cls" class="w3-col"><b><span>SIGN OUT</span></b></a></li>
+                           </ul>
+				</header>
+
+			
 				<br> <b><font size="6" color="gray">글쓰기</font></b> <br>
 
 				<form method="post" action="" name="qnaForm" id="qnaForm">

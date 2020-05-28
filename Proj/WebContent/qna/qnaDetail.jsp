@@ -25,6 +25,10 @@
 
 <script type="text/javascript">
 $(function(){
+	$('.logo').click(function(){
+		$(location).attr('href','/Project/qna/qnaList.cls');
+	});
+	
 	$('.opener').click(function(){
 		$(location).attr('href','/Project/info/infoCT.cls');
 	});
@@ -41,8 +45,9 @@ $(function(){
 		$(location).attr('href','/Project/qna/qnaList.cls');
 	});
 	
-	$('.dtlogo').click(function(){
-		$(location).attr('href','/Project/main.cls');
+	$('#dtlogo').click(function(){
+		alert('홈으로 드루와~');
+		$(location).attr('href', '/Project/main.cls');
 	});
 	
 	$('#sbbtn').click(function(){
@@ -72,13 +77,9 @@ $(function(){
 	$('#ansinput').click(function(){
      // 비동기통신으로 처리하기
 		var att = document.getElementById("att").value;
-		alert(att);
 		var abd = document.getElementById("aip").value;
-		alert(abd);
 		var upno = document.getElementById("qno").value;
-		alert(upno);
 		var sid = document.getElementById("sid").value;
-		alert(sid);
 			
 		$.ajax({
 			url: '/Project/qna/qnaAns.cls',
@@ -92,13 +93,9 @@ $(function(){
 			},
 			success: function(obj){
 				var astt = obj.anstt;
-				alert(astt);
 				var asbd = obj.ansbd;
-				alert(asbd);
 				var name = obj.name;
-				alert(name);
 				var date = obj.adate;
-				alert(date);
 				$('.ansdate').html(date);
 				$('.ansname').html(name);
 				$('.anstt').val(astt);
@@ -126,7 +123,7 @@ $(function(){
 				<!-- Header -->
 				<header id="header">
 
-					<a href="index.jsp" class="logo"><strong>Detail page</strong></a>
+					<a class="logo"><strong>Q&A page</strong></a>
 					 <ul class="icons">
                            <c:if test="${empty SID}">
                               <li><a href="/Project/member/login.jsp" class="w3-col"><b><span>SIGN IN</span></b></a></li>
@@ -297,6 +294,7 @@ $(function(){
 								<td colspan="5">
 								<c:if test="${SID eq 'sej0267@naver.com'}">
 										 <input type="button"  value="답변" id="ansbtn">
+										 <input type="submit" value="글삭제" id="sbbtn">
 								</c:if>
 								<c:if test="${SID eq QUEST.memid}">
 										 <input type="button"  value="글수정" id="modibtn"> 
@@ -309,6 +307,7 @@ $(function(){
 								 <td colspan="5">
 								 <c:if test="${SID eq 'sej0267@naver.com'}">
 									 <input type="button"  value="답변수정" id="ansmodi">
+									 <input type="submit" value="글삭제" id="sbbtn">
 								 </c:if>
 								 <c:if test="${SID eq QUEST.memid}">
 										 <input type="button"  value="글수정" id="modibtn"> 
@@ -333,7 +332,7 @@ $(function(){
 				<!-- Menu -->
 				<nav id="menu">
 									<header class="major">
-							   				<img class="ima_1" src="../images/main.png" border="0" />
+							   				<img class="ima_1" src="../images/main.png" border="0" id="dtlogo" />
 							   			<a></a>
 										<h2>Menu</h2>
 									</header>

@@ -28,6 +28,10 @@
 
 <script type="text/javascript">
         $(function(){
+        	$('.logo').click(function(){
+        		$(location).attr('href','/Project/qna/qnaList.cls');
+        	});
+        	
         	$('.opener').click(function(){
         		$(location).attr('href','/Project/info/infoCT.cls')
         	});
@@ -37,7 +41,7 @@
         		$('#frm').submit();
         	});
         	
-        	$('.dtlogo').click(function(){
+        	$('#dtlogo').click(function(){
         		alert('홈으로 드루와~');
         		$(location).attr('href', '/Project/main.cls');
         	});
@@ -90,7 +94,7 @@
 				<!-- Header -->
 				<header id="header">
 				  
-                           <a href="/Project/main/main.jsp" class="logo"><strong>Main page</strong></a>
+                           <a class="logo"><strong>Q&A page</strong></a>
                            <ul class="icons">
                            <c:if test="${empty SID}">
                               <li><a href="/Project/member/login.jsp" class="w3-col"><b><span>SIGN IN</span></b></a></li>
@@ -212,7 +216,7 @@
 				<!-- Menu -->
 					<nav id="menu">
 									<header class="major">
-							   				<img class="ima_1" src="../images/main.png" border="0" />
+							   				<img class="ima_1" src="../images/main.png" border="0" id="dtlogo"/>
 							   			<a></a>
 										<h2>Menu</h2>
 									</header>

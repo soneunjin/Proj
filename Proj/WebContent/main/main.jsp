@@ -65,7 +65,7 @@
 										 
 										 -->
 									<div class="image object" >
-										<div id="map2" style="width: 973px;height:620px; margin-left: -50px;"></div>
+										<div id="map2" style="width: 700px;height:600px; margin-left: -50px;"></div>
 									</div>	
 								
 									</section>
