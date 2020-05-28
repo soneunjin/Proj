@@ -38,6 +38,10 @@
 	   $('#list').click(function(){
 		   $(location).attr('href', '/Project/sales/sales.cls');
 	   });
+	   
+	   $('.gohome').click(function(){
+		  $(location).attr('href','/Project/main.cls'); 
+	   });
    });
 </script>
 </head>
@@ -122,25 +126,24 @@
 				<!-- menu -->
 				<nav id="menu" >
 					<header class="major">
-						<img class="ima_1" src="/Project/images/main.png" border="0" />
-						<a href=""><h2>Menu</h2></a>
+						<img class="ima_1 gohome" src="/Project/images/main.png" border="0" />
+						<h2>Menu</h2>
 					</header>
 				<ul>
-					<li><a href="/Project/sales/sales.cls">팝니당</a></li>
 					<li><span class="opener">오세용</span>
-										<ul>
-											<li><a href="/Project/info/infoCT.cls">자동차극장</a></li>
-											<li><a href="/Project/info/infoCP.cls">자동차캠핑</a></li>
-											<li><a href="/Project/info/infoDTC.cls">승차검진소</a></li>
-										</ul>
-									</li>
+							<ul>
+								<li><a href="/Project/info/infoCT.cls">자동차극장</a></li>
+								<li><a href="/Project/info/infoCP.cls">자동차캠핑</a></li>
+								<li><a href="/Project/info/infoDTC.cls">승차검진소</a></li>
+							</ul>
+					</li>
+					<li><a href="/Project/sales/sales.cls">팝니당</a></li>
+					<li><a href="/Project/review/review.cls">리뷰당</a></li>
 					<li><a href="/Project/board/board.cls">놀러왕</a></li>
 					<li><a href="/Project/qna/qnaList.cls">물어봥</a></li>
-					<li><a href="/Project/review/review.cls">리뷰당</a></li>
                </ul>
 				</nav>
 			</div>
 		</div>
-	</div>
 </body>
 </html>

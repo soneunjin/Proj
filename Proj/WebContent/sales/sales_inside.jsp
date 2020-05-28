@@ -23,7 +23,6 @@
 					url = '/Project/member/login.cls';
 				} else if (tid == 'logout') {
 					url = '/Project/member/logoutProc.cls';
-				
 				}
 			   });
 			   $('#list').click(function(){
@@ -45,6 +44,9 @@
 				   $('#frm1').attr('action', '/Project/sales/sales_modify.cls');
 				   $('#frm1').submit();
 			   });
+			   $('.gohome').click(function(){
+				  $(location).attr('href','/Project/main.cls'); 
+			   });
 			   
 		   }); 
 	</script>
@@ -55,18 +57,18 @@
 			<div class="inner">
 				<!-- Header -->
 				<header id="header">
-					<a href="/Project/main.cls" class="logo"><strong>Editorial</strong> by
-						HTML5 UP</a>
+					<a href="/Project/main.cls" class="logo"><strong>Sales page</strong></a>
 
 					<div class="icons">
-                 		 <a href="/Project/login.cls" class="">
-                  	<c:if test="${empty SID}">
-						<div class="btn w3-button" id="login"><b><span>SIGN IN</span></b></a></div>
-					</c:if>
+                 	<a href="/Project/login.cls" class="">
+	                  	<c:if test="${empty SID}">
+							<div class="btn w3-button" id="login"><b><span>SIGN IN</span></b></a></div>
+						</c:if>
 					<c:if test="${not empty SID}">
 						<div class="btn w3-col" id="logout"><b><span>SIGN OUT</span></b></a></div>
 					</c:if>
                </div>
+				</header>
                	 <form method="post" action="/Project/sales/sales.cls" id="frm">
 					<input type="hidden" name="ptt"  value="${DATA.ptt}">
 					<input type="hidden" name="pbd"  value="${DATA.pbd}">
@@ -89,7 +91,6 @@
 					<input type="hidden" name="pbd"  value="${DATA.pbd}">
 					<input type="hidden" name="cate"  value="${DATA.cate}">
                	 </form>
-				</header>
 				<div id="wrap">
 					<br>
 					<div id="topForm" style="text-align: left; padding-left: 10px;"><b>매장 정보</b></div>
@@ -172,28 +173,27 @@
 				</div>
 		</div>
 		<!-- Sidebar -->
-		<div id="sidebar">
-			<div class="inner">
-
+		<div id="sidebar" style="width: 350px;">
+			<div class="inner" style="width: 350px;">
 				<!-- Menu -->
 				<nav id="menu">
 					<header class="major">
-						<img class="ima_1" src="/Project/images/main.png" border="0" />
-						<a href="/Project/main.cls"><h2>MainPage</h2></a>
+						<img class="ima_1 gohome" src="/Project/images/main.png" border="0" />
+						<a href=""><h2>Menu</h2></a>
 					</header>
 				<ul>
-					<li><a href="/Project/sales/sales.cls">팝니당$</a></li>
 					<li>
-						<span class="opener">오세용~</span>
+						<span class="opener">오세용</span>
 						<ul>
 							<li><a href="/Project/info/infoCT.cls">자동차 극장</a></li>
 							<li><a href="/Project/info/infoCP.cls">자동차 캠핌장</a></li>
 							<li><a href="/Project/info/infoDTC.cls">진료소 정보</a></li>
 						</ul>
 					</li>
-					<li><a href="/Project/board/board.cls">놀러왕!</a></li>
-					<li><a href="/Project/qna/qnaList.cls">물어봥?</a></li>
-					<li><a href="/Project/review/review.cls">리뷰당?</a></li>
+					<li><a href="/Project/sales/sales.cls">팝니당</a></li>
+					<li><a href="/Project/review/review.cls">리뷰당</a></li>
+					<li><a href="/Project/board/board.cls">놀러왕</a></li>
+					<li><a href="/Project/qna/qnaList.cls">물어봥</a></li>
                </ul>
 				</nav>
 			</div>

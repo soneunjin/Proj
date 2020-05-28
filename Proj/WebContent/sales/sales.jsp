@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE HTML>
 <html>
@@ -59,6 +58,14 @@
 			$('#frm').attr('action', '/Project/sales/sales.cls');
 			$('#frm').submit();
 		});
+		
+		$('#swrite').click(function(){
+			$(location).attr('href','/Project/sales/sales_write.cls');
+		});
+		
+		$('.gohome').click(function(){
+			$(location).attr('href','/Project/main.cls');
+		});
 	});
 </script>
 <body class="is-preload">
@@ -87,11 +94,7 @@
             <div class="mg30" style="padding-left: 20px;">팝니당</div>
             <hr style="margin: 10px;">
             <div id="wrap">
-               <br>
-               <div id="topForm">
-                  <a href="/Project/sales/sales_write.cls"><b>글쓰기</b></a>
-               </div>
-               <br>
+              
                <div id="board" style="max-width: 1500px;">
                   <div></div>
                   <thread>
@@ -135,17 +138,22 @@
 				</c:if>
 			</div>
       </div>
+      		<br>
+               <div id="topForm">
+                  <input type="button" value="글쓰기" id="swrite">
+               </div>
+             
             </div>
       </div>
 		</div>
          </div>
       <!-- Sidebar -->
-      <div id="sidebar">
-         <div class="inner">
+      <div id="sidebar" style="width: 350px;">
+         <div class="inner" style="width: 350px;">
             <!-- Menu -->
             <nav id="menu">
 					<header class="major">
-						<img class="ima_1" src="/Project/images/main.png" border="0" />
+						<img class="ima_1 gohome" src="/Project/images/main.png" border="0" />
 						<h2>Menu</h2>
 					</header>
 				<ul>
