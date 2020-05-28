@@ -21,6 +21,6 @@
 		
 		// 취소버튼
 		$('#cbtn').click(function() {
-			$(location).attr('href','/Project/member/login.jsp');
+			$(location).attr('href','/Project/member/login.cls');
 		});
 });

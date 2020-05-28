@@ -154,7 +154,7 @@ k:hover {
 			</div>
 				
 				
-              <td id="cbtn"><p><a href="/Project/member/login.jsp">취소</a></p></td>
+              <td id="cbtn"><p><a href="/Project/member/login.cls">취소</a></p></td>
             </table>
            	  </td>
              </tr>

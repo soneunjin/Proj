@@ -69,12 +69,12 @@ $(document).ready(function() {
       
       // 아이디 찾기
       $('#findid').click(function(){
-    	  $(location).attr('href','/Project/ajax/id_find2.jsp');
+    	  $(location).attr('href','/Project/member/IdFindForm.cls');
       })
       
       // 비밀번호 찾기
       $('#findpw').click(function (){
-    	  $(location).attr('href','/Project/member/passFind.jsp');
+    	  $(location).attr('href','/Project/member/PassFindForm.cls');
       })
       
       
