@@ -16,7 +16,7 @@ public class InfoSQL {
 			buff.append("FROM "); 
 			buff.append("	info "); 
 			buff.append("WHERE "); 
-			buff.append("	ifcate = 'dtc' "); 
+			buff.append("	ifct = 'dtc' "); 
 			buff.append("	AND ifshow = 'Y' ");
 			break;
 		case SEL_ACPLIST:
@@ -25,7 +25,7 @@ public class InfoSQL {
 			buff.append("FROM "); 
 			buff.append("	info "); 
 			buff.append("WHERE "); 
-			buff.append("	ifcate = 'acp' "); 
+			buff.append("	ifct = 'acp' "); 
 			buff.append("	AND ifshow = 'Y' ");
 			break;
 		case SEL_CTTLIST:
@@ -34,7 +34,7 @@ public class InfoSQL {
 			buff.append("FROM "); 
 			buff.append("	info "); 
 			buff.append("WHERE "); 
-			buff.append("	ifcate = 'ctt' "); 
+			buff.append("	ifct = 'ctt' "); 
 			buff.append("	AND ifshow = 'Y' ");
 			break;
 		case SEL_CTT_INFO:

@@ -1,5 +1,10 @@
 package com.team.www.controller.qna;
-
+/**
+ * @author 이한철
+ * 
+ * 		Q&A 리스트 폼 보기 요청 처리 컨트롤러
+ * 		페이징 처리
+ */
 import javax.servlet.http.*;
 import java.util.*;
 

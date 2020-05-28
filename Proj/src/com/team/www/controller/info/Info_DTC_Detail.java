@@ -18,8 +18,6 @@ public class Info_DTC_Detail extends HttpServlet {
 	public void service(HttpServletRequest req, HttpServletResponse resp) {
 		resp.setCharacterEncoding("UTF-8");
 		String sname = req.getParameter("name");
-		System.out.println("승차검진소 웰컴");
-		System.out.println(sname);
 		
 		InfoVO iVO = new InfoVO();
 		

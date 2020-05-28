@@ -1,5 +1,9 @@
 package com.team.www.controller.qna;
-
+/**
+ * @author 이한철
+ * 
+ * 		Q&A 글 검색 컨트롤러
+ */
 import java.util.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -15,22 +19,18 @@ public class QnaSearch implements ClsController {
 	@Override
 public String exec(HttpServletRequest req, HttpServletResponse resp) {
 	String view = "/qna/SearchResult.jsp";
-	System.out.println("왔어요");
 	int nowPage = 1;
 	String strPage = req.getParameter("nowPage");
 	String type = req.getParameter("type");
 	String input = req.getParameter("input");
-	System.out.println(type + " : " + input);
 		
 	
-	System.out.println("서치시작페이지"+strPage);
 	try {
 		nowPage = Integer.parseInt(strPage);
 	} catch(Exception e) {}
 		
 	QnaDAO qDAO = new QnaDAO();
 	int totalCount = qDAO.getResultCount(type ,input);
-	System.out.println("얘는 몇이야?"+totalCount);
 	// PageUtil 만들고
 	if(totalCount == 0) {
 		totalCount = 1;

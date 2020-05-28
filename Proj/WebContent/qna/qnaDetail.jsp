@@ -25,20 +25,19 @@
 
 <script type="text/javascript">
 $(function(){
-	var id = $('#sid').val();
-	alert(id);
+	$('.opener').click(function(){
+		$(location).attr('href','/Project/info/infoCT.cls');
+	});
 	
 	$('.ans').css('display', 'none');
 	$('.ansresult').css('display', 'none');
 	
 	$('#modibtn').click(function(){
-		alert('글 내용을 수정합니다');
 		$('#ddfrm').attr('action','/Project/qna/qnaModi.cls');
 		$('#ddfrm').submit();
 	});
 	
 	$('#golbtn').click(function(){
-		alert('Q&A 목록으로 이동합니다');
 		$(location).attr('href','/Project/qna/qnaList.cls');
 	});
 	
@@ -47,19 +46,16 @@ $(function(){
 	});
 	
 	$('#sbbtn').click(function(){
-		alert('글을 삭제하고 리스트로 돌아갑니다');
 		$('#ddfrm').attr('action','/Project/qna/qnaDel.cls');
 		$('#ddfrm').submit();
 	});
 	
 	$('#ansbtn').click(function(){
-		alert('답변달아봅시다');
 		$('.ans').css('display', '');
 		
 	});
 	
 	$('#ansmodi').click(function(){
-		alert('답변 수정합시다');
       //var asno = $('#asno').val();
 	  
 		$('#asmodifrm').attr('action', '/Project/qna/AnsModi.cls');
@@ -68,7 +64,6 @@ $(function(){
 	});
 	
 	$('#ansdel').click(function(){
-		alert('답변을 삭제합니다');
 		
 		$('#asmodifrm').attr('action', '/Project/qna/qnaDel.cls');
 		$('#asmodifrm').submit();
@@ -76,7 +71,6 @@ $(function(){
 	
 	$('#ansinput').click(function(){
      // 비동기통신으로 처리하기
-		alert('답변글 등록합니다');
 		var att = document.getElementById("att").value;
 		alert(att);
 		var abd = document.getElementById("aip").value;
@@ -338,22 +332,26 @@ $(function(){
 
 				<!-- Menu -->
 				<nav id="menu">
-					<header class="major w3-padding-top">
-						<img class="dtlogo" src="/Project/images/main.png" width="300px"height="auto">
-					</header>
-					<ul>
-						<li><a href="elements.html">팝니당$</a></li>
-						<li><span class="opener">오세용~</span>
-							<ul>
-								<li><a href="#">자동차극장</a></li>
-								<li><a href="#">자동차캠핑</a></li>
-								<li><a href="#">선별진료소</a></li>
-							</ul></li>
-						<li><a href="#">놀러왕!</a></li>
-						<li><a href="#">물어봥?</a></li>
-
-					</ul>
+									<header class="major">
+							   				<img class="ima_1" src="../images/main.png" border="0" />
+							   			<a></a>
+										<h2>Menu</h2>
+									</header>
+									<ul>
+									<li><span class="opener">오세용!</span>
+										<ul>
+											<li><a href="/Project/info/infoCT.cls">자동차극장</a></li>
+											<li><a href="/Project/info/infoCP.cls">자동차캠핑</a></li>
+											<li><a href="/Project/info/infoDTC.cls">승차검진소</a></li>
+										</ul>
+									</li>
+									<li><a href="/Project/sales/sales.cls">팝니당!</a></li>
+									<li><a href="/Project/review/review.cls">리뷰당!</a></li>
+									<li><a href="/Project/board/board.cls">놀러왕!</a></li>
+									<li><a href="/Project/qna/qnaList.cls">물어봥?</a></li>
+									</ul>
 				</nav>
+				
 			</div>
 		</div>
 	</div>

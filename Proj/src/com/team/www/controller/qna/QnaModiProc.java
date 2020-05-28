@@ -1,5 +1,10 @@
 package com.team.www.controller.qna;
-
+/**
+ * @author 이한철
+ * 
+ * 		글 수정 처리과정 컨트롤러
+ * 
+ */
 import javax.servlet.http.*;
 
 import com.team.www.controller.*;
@@ -17,9 +22,6 @@ public class QnaModiProc implements ClsController {
 		
 		int qno = Integer.parseInt(sqno);
 		
-		System.out.println(qno);
-		System.out.println(sqtt);
-		System.out.println(sqbd);
 		
 		QnaDAO qDAO = new QnaDAO();
 		int modi = qDAO.modiData(sqtt, sqbd, qno);

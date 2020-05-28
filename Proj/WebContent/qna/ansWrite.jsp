@@ -1,11 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE HTML>
 <!--
-   Editorial by HTML5 UP
-   html5up.net | @ajlkn
-   Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+
 -->
 <html>
 <head>
@@ -48,6 +45,11 @@
 
 <script type="text/javascript">
         $(function(){
+        	$('.opener').click(function(){
+        		$(location).attr('href','/Project/info/infoCT.cls');
+        	});
+        	
+        	
         	$('#golbtn').click(function(){
         		$(location).attr('href','/Project/qna/qnaList.cls');
         	});
@@ -141,23 +143,24 @@
 
 				<!-- Menu -->
 				<nav id="menu">
-					<header class="major w3-padding-top">
-						<img class="dtlogo" src="/Project/images/main.png" width="300px"
-							height="auto"> <a href="main.jsp"><h2>menu</h2></a>
-					</header>
-					<ul>
-						<li><a href="index.html">모른당X</a></li>
-						<li><a href="elements.html">팝니당$</a></li>
-						<li><span class="opener">오세용~</span>
-							<ul>
-								<li><a href="#">자동차극장</a></li>
-								<li><a href="#">자동차캠핑</a></li>
-								<li><a href="#">선별진료소</a></li>
-							</ul></li>
-						<li><a href="#">놀러왕!</a></li>
-						<li><a href="#">물어봥?</a></li>
-
-					</ul>
+									<header class="major">
+							   				<img class="ima_1" src="../images/main.png" border="0" />
+							   			<a></a>
+										<h2>Menu</h2>
+									</header>
+									<ul>
+									<li><span class="opener">오세용!</span>
+										<ul>
+											<li><a href="/Project/info/infoCT.cls">자동차극장</a></li>
+											<li><a href="/Project/info/infoCP.cls">자동차캠핑</a></li>
+											<li><a href="/Project/info/infoDTC.cls">승차검진소</a></li>
+										</ul>
+									</li>
+									<li><a href="/Project/sales/sales.cls">팝니당!</a></li>
+									<li><a href="/Project/review/review.cls">리뷰당!</a></li>
+									<li><a href="/Project/board/board.cls">놀러왕!</a></li>
+									<li><a href="/Project/qna/qnaList.cls">물어봥?</a></li>
+									</ul>
 				</nav>
 			</div>
 		</div>

@@ -13,7 +13,6 @@ public class InfoDTC implements ClsController {
 	public String exec(HttpServletRequest req, HttpServletResponse resp) {
 		String view = "/info/infoDTC.jsp";
 		
-		System.out.println("왔습니다");
 		
 		  InfoDAO iDAO = new InfoDAO();
 		 

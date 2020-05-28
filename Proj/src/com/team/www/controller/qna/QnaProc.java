@@ -1,5 +1,9 @@
 package com.team.www.controller.qna;
-
+/**
+ * @author 이한철
+ * 
+ * 		Q&A 글 작성하고 DB에 업로드 하는 컨트롤러
+ */
 import javax.servlet.http.*;
 
 import com.team.www.controller.*;
@@ -15,7 +19,6 @@ public class QnaProc implements ClsController {
 		String qip = req.getParameter("qbd");
 		String id = (String) req.getSession().getAttribute("SID");
 		
-		System.out.println(qtt +" | "+ qip + " | " + id);
 		QnaDAO qDAO = new QnaDAO();
 		int cnt = qDAO.addData(qtt, qip, id);
 		return view;

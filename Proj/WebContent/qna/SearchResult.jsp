@@ -49,9 +49,11 @@
 
 <script type="text/javascript">
         $(function(){
+        	$('.opener').click(function(){
+        		$(location).attr('href','/Project/info/infoCT.cls');
+        	});
         	
         	$('#wbtn').click(function(){
-        		alert('글쓰기 창으로 이동합니다');
         		$('#frm').attr('action','/Project/qna/qnaWrite.cls');
         		$('#frm').submit();
         	});
@@ -62,9 +64,7 @@
         	});
         	
         	$('.ebtn').siblings().click(function(){
-        		alert('상세보기 페이지로 이동합니다');
         		var sid = $('#sid').val();
-        		alert(sid);
         		var qno = $(this).parent().attr('id');
         		$('#qqno').val(qno);
         		$('#sid1').val(sid);
@@ -87,11 +87,15 @@
         	
         	$('.search').click(function(){
         		var input = $('#resultinput').val();
-        		alert(input);
         		var type = $('#resel').val();
-        		alert(type);
         		$('#searchList').attr('action', '/Project/qna/qnaSearch.cls');
         		$('#searchList').submit();
+        	});
+        	
+        	$('.content').hover(function(){
+        		$(this).css('color','brown');
+        	},function(){
+        		$(this).css('color','gray');
         	});
         });
     </script>
@@ -132,7 +136,7 @@
 									<td>답변상태</td>
 								</tr>
 									<c:forEach var="data" items="${LIST}" varStatus="status">
-									<tr id="${data.qno}">
+									<tr class="content" id="${data.qno}">
 										<td class="ebtn">${data.qno}</td>
 										<td>${data.qtt}</td>
 										<td>${data.name}</td>
@@ -211,26 +215,27 @@
 				<!-- Search -->
 
 
-				<!-- Menu -->
 				<nav id="menu">
-					<header class="major w3-padding-top">
-						<img class="dtlogo" src="../images/main.png" width="300px"height="auto"> 
-						<!-- 얘는 어케할까??? -->
-						<a href="main.jsp"><h2>menu</h2></a>
-					</header>
-					<ul>
-						<li><a href="elements.html">팝니당$</a></li>
-						<li><span class="opener">오세용~</span>
-							<ul>
-								<li><a href="#">자동차극장</a></li>
-								<li><a href="#">자동차캠핑</a></li>
-								<li><a href="#">선별진료소</a></li>
-							</ul></li>
-						<li><a onclick="">놀러왕!</a></li>
-						<li><a href="#">물어봥?</a></li>
-
-					</ul>
+									<header class="major">
+							   				<img class="ima_1" src="../images/main.png" border="0" />
+							   			<a></a>
+										<h2>Menu</h2>
+									</header>
+									<ul>
+									<li><span class="opener">오세용!</span>
+										<ul>
+											<li><a href="/Project/info/infoCT.cls">자동차극장</a></li>
+											<li><a href="/Project/info/infoCP.cls">자동차캠핑</a></li>
+											<li><a href="/Project/info/infoDTC.cls">승차검진소</a></li>
+										</ul>
+									</li>
+									<li><a href="/Project/sales/sales.cls">팝니당!</a></li>
+									<li><a href="/Project/review/review.cls">리뷰당!</a></li>
+									<li><a href="/Project/board/board.cls">놀러왕!</a></li>
+									<li><a href="/Project/qna/qnaList.cls">물어봥?</a></li>
+									</ul>
 				</nav>
+				
 			</div>
 		</div>
 	</div>

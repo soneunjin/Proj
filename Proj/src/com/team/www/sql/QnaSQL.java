@@ -9,6 +9,7 @@ public class QnaSQL {
 	public final int SEL_QNA_ANS= 1006;
 	public final int SEARCH_RESULT_LIST= 1007;
 	public final int SEL_RESULT_CNT = 1008;
+	public final int CHECK_QNA_ANS = 1009;
 	
 	public final int ADD_QNA = 2001;
 	public final int ADD_QNA_ANS = 2002;

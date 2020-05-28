@@ -18,8 +18,6 @@ public class InfoDetail extends HttpServlet {
 	public void service(HttpServletRequest req, HttpServletResponse resp) {
 		resp.setCharacterEncoding("UTF-8");
 		String sname = req.getParameter("name");
-		System.out.println("비동기 왜 안와 ㅅㅂ");
-		System.out.println(sname);
 		
 		InfoVO iVO = new InfoVO();
 		

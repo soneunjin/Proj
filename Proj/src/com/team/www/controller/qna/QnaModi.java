@@ -1,5 +1,11 @@
 package com.team.www.controller.qna;
 
+/**
+ * @author 이한철
+ * 
+ * 		질문글 수정 요청 컨트롤러
+ * 
+ */
 import java.util.ArrayList;
 
 import javax.servlet.http.*;
@@ -14,11 +20,8 @@ public class QnaModi implements ClsController {
 	public String exec(HttpServletRequest req, HttpServletResponse resp) {
 		String view = "/qna/qnaWrite.jsp";
 		
-		System.out.println("모디로 넘어는 왔습니다");
 		String sid = req.getParameter("sid");
 		String sno = req.getParameter("qqno");
-		System.out.println(sno);
-		System.out.println(sid);
 		
 		int	qno = Integer.parseInt(sno);
 		QnaDAO qDAO = new QnaDAO();

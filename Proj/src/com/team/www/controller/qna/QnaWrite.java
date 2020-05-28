@@ -1,5 +1,9 @@
 package com.team.www.controller.qna;
-
+/**
+ * @author 이한철
+ * 
+ * 	 이 클래스는 Q&A 글쓰기 컨트롤러
+ */
 import javax.servlet.http.*;
 
 import com.team.www.controller.*;

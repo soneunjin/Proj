@@ -95,7 +95,6 @@ public class QnaDAO {
 				db.close(stmt);
 				db.close(con);
 			}
-			System.out.println("dao total cnt : "+cnt);
 			return cnt;
 			
 		}
@@ -286,17 +285,14 @@ public class QnaDAO {
 	public String getMname(String mid) {
 		String str = "";
 		con = db.getCon();
-		System.out.println(mid);
 		String sql = qSQL.getSQL(qSQL.SEL_QNA_MNAME);
 		pstmt = db.getPSTMT(con, sql);
-		System.out.println("dao 왔다");
 		try {
 			pstmt.setString(1, mid);
 			rs = pstmt.executeQuery();
 			rs.next();
 			
 			str = rs.getString("name");
-			System.out.println(str);
 		} catch(Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -390,9 +386,14 @@ public class QnaDAO {
 			cnt = pstmt.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
+		} finally {
+			db.close(pstmt);
+			db.close(con);
 		}
 		
 		return cnt;
 	}
+	
+
 	
 }

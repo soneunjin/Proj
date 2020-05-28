@@ -1,5 +1,10 @@
 package com.team.www.controller.qna;
-
+/**
+ * @author 이한철
+ * 
+ * 		답변글 작성 처리 컨트롤러 
+ * 		(비동기통신_ajax)
+ */
 import javax.servlet.http.*;
 
 import com.team.www.controller.*;
@@ -14,7 +19,6 @@ public class QnaAns implements ClsController {
 		
 		req.setAttribute("isRedirect", null);
 		
-		System.out.println("비동기 도착");
 		String sid = req.getParameter("sid");
 		String astt = req.getParameter("astt");
 		String asbd = req.getParameter("asbd");
@@ -25,10 +29,6 @@ public class QnaAns implements ClsController {
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
-		System.out.println(sid);
-		System.out.println(astt);
-		System.out.println(asbd);
-		System.out.println(qno);
 		
 		QnaDAO qDAO = new QnaDAO();
 		int result = qDAO.addQnaAns(astt, asbd, qno, sid);

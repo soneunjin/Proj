@@ -49,7 +49,7 @@
 										</header>
 										<p class="list">
 											<c:forEach var="data" items="${INFO}">
-											   <div class="w3-hover"><h4 id="${data.ifaddr}">${data.ifname}</h4><br></div>
+											   <div class="content"><h4 id="${data.ifaddr}">${data.ifname}</h4><br></div>
 											</c:forEach>
 										</p>
 										<!-- 
@@ -98,28 +98,22 @@
 								<nav id="menu">
 									<header class="major">
 							   				<img class="ima_1" src="../images/main.png" border="0" />
-							   			</a>
+							   			<a></a>
 										<h2>Menu</h2>
 									</header>
 									<ul>
-										<li><a href="index.html">메인 페이지</a></li>
-										<li><a href="generic.html">홍보 게시판</a></li>
-										<li><a href="elements.html">자유게시판</a></li>
-										<li>
-											<span class="opener">위치 정보</span>
-											<ul>
-												<li><a href="/Project/info/infoCT.cls">자동차 극장</a></li>
-												<li><a href="/Project/info/infoCP.cls">자동차 캠핌장</a></li>
-												<li><a href="/Project/info/infoDTC.cls">승차검진 진료소 정보</a></li>
-												<!--
-												<c:if test="${SID eq 'sej0267@naver.com'}">
-													<li><a href="#">정보 위치 등록</a></li>
-												</c:if> 
-												-->
-											</ul>
-										</li>
-										<li><a href="/Project/qna/qnaList.cls">문의 사항</a></li>
-										<li><a href="#">공지 사항</a></li>
+									<li><span class="opener">오세용!</span>
+										<ul>
+											<li><a href="/Project/info/infoCT.cls">자동차극장</a></li>
+											<li><a href="/Project/info/infoCP.cls">자동차캠핑</a></li>
+											<li><a href="/Project/info/infoDTC.cls">승차검진소</a></li>
+										</ul>
+									</li>
+									<li><a href="/Project/sales/sales.cls">팝니당!</a></li>
+									<li><a href="/Project/review/review.cls">리뷰당!</a></li>
+									<li><a href="/Project/board/board.cls">놀러왕!</a></li>
+									<li><a href="/Project/qna/qnaList.cls">물어봥?</a></li>
+									</ul>
 										<!--
 										<li>
 											 <span class="opener">Another Submenu</span>
@@ -184,13 +178,17 @@
 					$(location).attr('href', url);
 				});
 				
+				$('.content').hover(function(){
+	        		$(this).css('color','brown');
+	        	},function(){
+	        		$(this).css('color','gray');
+	        	});
+				
 				$('.list').siblings().click(function(){
 					$('#map2').css('display', '');
 					$('#map1').css('display', 'none');
 					var name = $(this).children().html();
-					alert(name);
 					var ii = $(this).children().attr('id');
-					alert(ii);
 					
 					$.ajax({
 						url: "/Project/ajax/infoDetail.dtc",
@@ -202,13 +200,9 @@
 						success: function(obj){
 							$('.detail').css('display', '');
 							var name = obj.name;
-							alert(name);
 							var tel = obj.tel;
-							alert(tel);
 							var addr = obj.addr;
-							alert(addr);
 							var link = obj.link;
-							alert(link);
 							$('#ctname').html(name);
 							$('#cttel').html(tel);
 							$('#ctaddr').html(addr);
@@ -219,10 +213,6 @@
 							alert('통신에러!!!');
 						}
 			});  
-					
-					
-					
-					
 					
 					// 지도 전체 코드
 					var mapContainer = document.getElementById('map2');
@@ -280,35 +270,7 @@
 					var map = new kakao.maps.Map(mapContainer, mapOption); 
 					
 					
-					// 주소-좌표 변환 객체를 생성합니다
-					var geocoder = new kakao.maps.services.Geocoder();
-					// 서울시 구로구 시흥대로 163길 21
-					 
-					// 주소로 좌표를 검색합니다
-					geocoder.addressSearch( ii , function(result, status) {
-					
-					    // 정상적으로 검색이 완료됐으면 
-					     if (status === kakao.maps.services.Status.OK) {
-					
-					        var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
-					        
-					        // 결과값으로 받은 위치를 마커로 표시합니다
-					        var marker = new kakao.maps.Marker({
-					            map: map,
-					            position: coords
-					        });
-					
-					        // 인포윈도우로 장소에 대한 설명을 표시합니다
-					        var infowindow = new kakao.maps.InfoWindow({
-					            content: '<div style="width:150px;text-align:center;padding:6px 0;">${DATA.ptt}</div>'
-					        });
-					        infowindow.open(map, marker);
-					
-					        // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
-					        
-					        map.setCenter(coords);
-					     }
-					});   
+				
 					
 					// 지도 전체 코드
 					
