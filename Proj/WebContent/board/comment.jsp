@@ -12,8 +12,17 @@
 <script type="text/javascript" src="/Project/js/jquery-3.5.0.min.js"></script>
 <script type="text/javascript" src="/Project/js/board.js"></script>
 <script type="text/javascript">
-	
-	
+	$(document).ready(function() {
+
+		$('.sbtn').click(function() {
+			$('#cfrm').attr('action', '/Project/board/boardComment.cls');
+			$('#cfrm').submit();
+
+			window.location.reload(true);
+			window.close();
+		});
+
+	});
 </script>
 </head>
 <body class="w3-khaki">
@@ -21,7 +30,7 @@
 
 		<div class="w3-container w3-margin-top">
 			<button class="w3-left">댓글입력</button>
-			<button class="w3-right sbtn " >입력</button>
+			<button class="w3-right sbtn ">입력</button>
 			<form id="cfrm" method="post" action="">
 				<input type="hidden" name="bdno" id="bdno" value="${bdno}">${bdno}
 				<textarea class="comment" name="comment" id="comment"

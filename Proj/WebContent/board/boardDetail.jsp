@@ -24,7 +24,7 @@
 <script type="text/javascript" src="/Project/js/board.js"></script>
 <script type="text/javascript" src="/Project/js/login.js"></script>
 <script type="text/javascript">
-	window.addEventListener("keydown", function(event) {
+/* 	window.addEventListener("keydown", function(event) {
 		if (event.defaultPrevented) {
 			return;
 		}
@@ -37,7 +37,7 @@
 
 			event.preventDefault();
 		}
-	}, true);
+	}, true); */
 </script>
 </head>
 <body class="is-preload">
