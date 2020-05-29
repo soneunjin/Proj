@@ -23,7 +23,7 @@ $(function(){
 		$('#frm1').submit();
 		alert('회원정보가 성공적으로 변경되었습니다.');
 		});
-
+		
 		$('#lbtn').click(function() {
 			var spwa = $('#pw').val();
 			var spw = $('#pwe').val();
@@ -63,6 +63,12 @@ $(function(){
 			$(location).attr('href','/Project/main.cls');
 			alert('메인 홈페이지로!!');
 		});
+		
+		
+		  $('#clbtn').click(function(){
+			    alert('사업자 정보가 등록되었습니다');
+		    	$('#frm').submit(); 
+		     });
 		
 		// 비밀번호 정규식
 	   	   function isPw(pw) {

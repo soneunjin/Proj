@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>드라이브 스루</title>
+		<title>사업자 정보 등록</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="/Project/assets/css/main.css" />
 		<link rel="stylesheet" href="/Project/css/w3.css" />
@@ -97,7 +97,7 @@
 										      <span for="pw">사장님 이름</span>
 										      <input type="text" id="bceo" name="bceo" />
 										    </label>
-										    <button type="button" class="submit" id="lbtn">Submit</button>
+										    <button type="button" class="submit" id="clbtn">Submit</button>
 										  </div>
 										   </form>
 										  </div>   

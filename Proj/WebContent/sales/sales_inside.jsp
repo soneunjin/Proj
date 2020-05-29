@@ -111,7 +111,7 @@
 					 <br>
 					 <div id="map" style="width:450px;height:450px; display: inline-block; margin-left: 50px;"></div>
 					 <span style="margin: 20px;">
-					 <img alt="" src="/Project/WebContent/images/${param.img}" style="height:450px; width:450px;">
+					 <img alt="" src="/Project/images/${param.savename}" style="height:450px; width:450px;">
 					</span>
 					<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=bfbcb2a9b1a94611a8804b0d71d6315c&libraries=services"></script>
 					<script>

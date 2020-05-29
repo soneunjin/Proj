@@ -1,9 +1,9 @@
 $(document).ready(function() {
-   document.querySelector('.img__btn').addEventListener('click', function(){
+     document.querySelector('.img__btn').addEventListener('click', function(){
      document.querySelector('.cont').classList.toggle('s--signup');
      
      });
-     
+   
      
      $('#lbtn').click(function(){
          // 할일

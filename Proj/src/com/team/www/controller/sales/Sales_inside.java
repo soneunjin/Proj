@@ -21,6 +21,7 @@ public class Sales_inside implements ClsController {
 		SalesVO sVO = new SalesVO();
 		String memid = req.getParameter("memid");
 		String savename = req.getParameter("savename");
+		
 		String car = req.getParameter("car");
 		sVO.setMemid(req.getParameter("memid"));
 		System.out.println("inside.memid : " + memid);
