@@ -15,7 +15,7 @@ public class Review_write implements ClsController {
 		HttpSession session = req.getSession();
 		String sid = (String)session.getAttribute("SID");
 		String pno = req.getParameter("pno");
-		System.out.println("pno : " + pno);
+		//system.out.println("pno : " + pno);
 		if(sid == null || sid.length() == 0) {
 			view = "/Project/member/login.cls";
 			req.setAttribute("isRedirect", true);

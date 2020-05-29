@@ -14,9 +14,9 @@ public class EditInfoProc implements ClsController {
 		
 		String memid = req.getParameter("memid");
 		String phone = req.getParameter("phone");
-		System.out.println(phone);
+		//system.out.println(phone);
 		String cano = req.getParameter("opt");
-		System.out.println(cano);
+		//system.out.println(cano);
 		
 		int carno = 0;
 		try {

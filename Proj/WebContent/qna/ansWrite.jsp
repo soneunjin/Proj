@@ -49,11 +49,8 @@
         	
         	
         	$('#sbbtn').click(function(){
-        		alert('글등록');
         		var qtt = document.getElementById('qtt2').value;
         		var qip = document.getElementById('qip2').value;
-        		alert(qtt);
-        		alert(qip);
         		$('#qtt').val(qtt);
         		$('#qbd').val(qip);
         		$('#qnaWForm').attr('action', '/Project/qna/qnaProc.cls');
@@ -61,7 +58,6 @@
         	});
         	
         	$('#modibtn').click(function(){
-        		alert('눌렸습니다');
         		var qtt = document.getElementById('qtt1').value;
         		var qip = document.getElementById('qip1').value;
         		$('#qqtt').val(qtt);

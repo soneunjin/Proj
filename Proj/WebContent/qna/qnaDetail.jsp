@@ -46,7 +46,6 @@ $(function(){
 	});
 	
 	$('#dtlogo').click(function(){
-		alert('홈으로 드루와~');
 		$(location).attr('href', '/Project/main.cls');
 	});
 	

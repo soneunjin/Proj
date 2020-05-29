@@ -25,9 +25,9 @@ public class PwFindProc implements ClsController {
 		req.setAttribute("isRedirect", true);
 		// 파라미터 가져오고
 		String name = req.getParameter("name");
-		System.out.println(name);
+		//system.out.println(name);
 		String memid = req.getParameter("email");
-		System.out.println(memid);
+		//system.out.println(memid);
 		
 		String host = "smtp.naver.com";
 		String user = "sej0267@naver.com";
@@ -63,7 +63,7 @@ public class PwFindProc implements ClsController {
             }
         }
         String AuthenticationKey = temp.toString();
-        System.out.println(AuthenticationKey);
+        //system.out.println(AuthenticationKey);
         
 
         
@@ -78,7 +78,7 @@ public class PwFindProc implements ClsController {
             MimeMessage msg = new MimeMessage(session);
             msg.setFrom(new InternetAddress(user, "관리자"));
             msg.addRecipient(Message.RecipientType.TO, new InternetAddress(memid));
-            System.out.println(memid);
+            //system.out.println(memid);
             
             //메일 제목
             msg.setSubject("안녕하세요 드루와 인증 메일입니다.");
@@ -86,11 +86,11 @@ public class PwFindProc implements ClsController {
             msg.setText("고객님의 임시비밀번호 :"+ temp + "입니다. \n 비밀번호를 변경해주세요.");
             
             Transport.send(msg);
-            System.out.println("이메일 전송");
+            //system.out.println("이메일 전송");
             MemberDAO mDAO = new MemberDAO();
             
     		int pw = mDAO.passFind(AuthenticationKey, memid, name);
-    		System.out.println(AuthenticationKey + memid + name);
+    		//system.out.println(AuthenticationKey + memid + name);
             
         }catch (Exception e) {
             e.printStackTrace();// TODO: handle exception

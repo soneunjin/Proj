@@ -23,7 +23,7 @@ public class BoardEditProc implements ClsController {
 	         bno = Integer.parseInt(eno);
 	      } catch(Exception e) {}
 		String title = req.getParameter("title");
-		System.out.println(title);
+		//system.out.println(title);
 		String body = req.getParameter("body");
 		String cat = req.getParameter("cate");
 		String cate = req.getParameter("cate");

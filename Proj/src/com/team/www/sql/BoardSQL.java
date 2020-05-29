@@ -91,7 +91,7 @@ public class BoardSQL {
 			break;
 			
 		case SEARCH:
-			System.out.println("여기옴?");
+			//system.out.println("여기옴?");
 			buff.append("SELECT ");
 			buff.append("   rno, bdno, bdct, bdtt, name, today, vcnt ");
 			buff.append("FROM ");

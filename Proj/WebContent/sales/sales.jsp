@@ -21,7 +21,6 @@
 		
 		$('.btn').click(function() {
 			var tid = $(this).attr('id');
-			alert(tid);
 			var url = '';
 			if(tid == 'login') {
 				url = '/Project/member/login.cls';

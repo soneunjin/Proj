@@ -19,12 +19,12 @@ public class CommentProc implements ClsController {
 		} catch (Exception e) {
 		}
 
-		System.out.println("com : " + bno);
+		//system.out.println("com : " + bno);
 		BoardDAO bDAO = new BoardDAO();
 		BoardVO bVO = bDAO.getDetail(bno);
 
 		req.setAttribute("bdno", bno);
-		System.out.println("보냈냐");
+		//system.out.println("보냈냐");
 		return view;
 
 	}

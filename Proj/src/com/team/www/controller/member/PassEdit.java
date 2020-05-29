@@ -16,13 +16,13 @@ public class PassEdit implements ClsController {
 		MemberDAO mDAO = new MemberDAO();
 		
 		String pw = req.getParameter("gpw");
-		System.out.println(pw);
+		//system.out.println(pw);
 		int cnt = mDAO.SEL_COUNT(sid, pw);
 		// 1 이면 기존비밀번호를 정상입력했으니 변경 처리
 		// 1 아니면 기존비밀번호 입력 잘못한거야 - alert 
-		System.out.println(sid);
+		//system.out.println(sid);
 		String pwe = req.getParameter("pw");
-		System.out.println(pwe);
+		//system.out.println(pwe);
 		req.setAttribute("CNT", cnt);
 		if(cnt == 1) {
 			int mao = mDAO.passEidt(pwe, sid);

@@ -14,7 +14,7 @@ public class Sales_delete implements ClsController {
 		req.setAttribute("isRedirect", true);
 		String pno = (String)req.getParameter("pno");
 		int spno = Integer.parseInt(pno);
-		System.out.println("delete.spno : " + spno);
+		//system.out.println("delete.spno : " + spno);
 		SalesDAO sDAO = new SalesDAO();
 		sDAO.deleteData(spno);
 		return view;

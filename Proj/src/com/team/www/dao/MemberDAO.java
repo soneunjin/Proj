@@ -207,7 +207,7 @@ public class MemberDAO {
 		pstmt = db.getPSTMT(con, sql);
 		try {
 			pstmt.setString(1, memid);
-			System.out.println(memid);
+			//system.out.println(memid);
 			rs = pstmt.executeQuery();
 			rs.next();
 			mVO.setMemid(rs.getString("memid"));
@@ -233,11 +233,11 @@ public class MemberDAO {
 		pstmt = db.getPSTMT(con, sql);
 		try {
 			pstmt.setString(3, memid);
-			System.out.println(memid);
+			//system.out.println(memid);
 			pstmt.setString(1, phone);
-			System.out.println(phone);
+			//system.out.println(phone);
 			pstmt.setInt(2, carno);
-			System.out.println(carno);
+			//system.out.println(carno);
 			
 			cnt = pstmt.executeUpdate();
 		} catch(Exception e) {

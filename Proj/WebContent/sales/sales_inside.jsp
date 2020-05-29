@@ -15,7 +15,6 @@
 <body class="is-preload">
 	<script type="text/javascript" src="/Project/assets/js/sales.js"></script>
 	<script type="text/javascript">
-		alert('${IMG}');
 		$(document).ready(function(){
 			$('.btn').click(function() {
 				var tid = $(this).attr('id');

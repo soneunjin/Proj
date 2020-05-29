@@ -18,9 +18,9 @@ public class Sales_modify implements ClsController {
 		}catch(Exception e) {}
 		String ptt = req.getParameter("ptt");
 		String pbd = req.getParameter("pbd");
-		System.out.println("modi.pno : " + spno);
-		System.out.println("modi.ptt : " + ptt);
-		System.out.println("modi.pbd : " + pbd);
+		//system.out.println("modi.pno : " + spno);
+		//system.out.println("modi.ptt : " + ptt);
+		//system.out.println("modi.pbd : " + pbd);
 		req.setAttribute("PNO", spno);
 		req.setAttribute("PTT", ptt);
 		req.setAttribute("PBD", pbd);

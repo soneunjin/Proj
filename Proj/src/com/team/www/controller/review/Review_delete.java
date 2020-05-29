@@ -14,7 +14,7 @@ public class Review_delete implements ClsController {
 		req.setAttribute("isRedirect", true);
 		String rno = (String) req.getParameter("rno");
 		int srno = Integer.parseInt(rno);
-		System.out.println("delete.srno : " + srno);
+		//system.out.println("delete.srno : " + srno);
 		ReviewDAO rDAO = new ReviewDAO();
 		rDAO.deleteData(srno);
 		return view;

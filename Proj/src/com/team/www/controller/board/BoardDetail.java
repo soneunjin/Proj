@@ -14,7 +14,7 @@ public class BoardDetail implements ClsController {
 	public String exec(HttpServletRequest req, HttpServletResponse resp) {
 		String view = "/board/boardDetail.jsp";
 		String sno = req.getParameter("bno");
-		System.out.println(sno);
+		//system.out.println(sno);
 		int bno = 0;
 		try {
 			bno = Integer.parseInt(sno);
@@ -34,7 +34,7 @@ public class BoardDetail implements ClsController {
 		req.setAttribute("CLICK", bVO1);
 		req.setAttribute("LIST", clist);
 		req.setAttribute("bdno", bno);
-		System.out.println("여기");
+		//system.out.println("여기");
 		// 6. view를 부르고
 		return view;
 

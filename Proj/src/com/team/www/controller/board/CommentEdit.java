@@ -20,11 +20,11 @@ public class CommentEdit implements ClsController {
 		} catch (Exception e) {
 		}
 
-		System.out.println("com : " + bno);
-		System.out.println("bdbd : " + bdbd);
+		//system.out.println("com : " + bno);
+		//system.out.println("bdbd : " + bdbd);
 		BoardDAO bDAO = new BoardDAO();
 		int cnt = bDAO.comEdit(bno, bdbd);
-		System.out.println("보냈냐");
+		//system.out.println("보냈냐");
 		return view;
 
 	}

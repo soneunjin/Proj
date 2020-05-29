@@ -15,7 +15,7 @@ public class BoardDelete implements ClsController {
 	public String exec(HttpServletRequest req, HttpServletResponse resp) {
 		String view = "/board/board.cls";
 		 String bno = req.getParameter("no");
-		 System.out.println("아무거나" + bno);
+		 //system.out.println("아무거나" + bno);
 		 int bdno = Integer.parseInt(bno);
 	      // 3. DB에서 데이터 가져오고
 	      // 4. 데이터 받고

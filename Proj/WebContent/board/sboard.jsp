@@ -27,7 +27,6 @@
 	$(document).ready(function() {
 		$('.spgbt').click(function() {
 			var str = $(this).html();
-			alert(str);
 			if (str == 'PRE') {
 				$('#nowPage').val('${PAGE.startPage - 1}');
 			} else if (str == 'NEXT') {

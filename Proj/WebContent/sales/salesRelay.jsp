@@ -11,15 +11,13 @@
 </style>
 <script type="text/javascript">
 	$(function(){
-		alert('${IMG}');
-			$('#frm').submit();
+		$('#frm').submit();
 	});
 </script>
 </head> 
 <body>
 	<form method="post" action="/Project/sales/sales_inside.cls" id="frm">
 		<input type="hidden" name="pno"  value="${PNO}">
-		<input type="hidden" name="ptt"  value="${DATA.ptt}">
 		<input type="hidden" name="pbd"  value="${DATA.pbd}">
 		<input type="hidden" name="today"  value="${DATA.today}">
 		<input type="hidden" name="bcnt"  value="${DATA.bcnt}">

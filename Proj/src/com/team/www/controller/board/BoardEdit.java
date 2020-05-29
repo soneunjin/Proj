@@ -28,7 +28,7 @@ public class BoardEdit implements ClsController {
 	      BoardVO bVO = bDAO.getDetail(bno);      
 	      req.setAttribute("DATA", bVO);
 	      req.setAttribute("bdno",bno);
-	      System.out.println("위치확인");
+	      //system.out.println("위치확인");
 	      // 5. 화면에 심고
 	      
 	      // 6. view를 부르고

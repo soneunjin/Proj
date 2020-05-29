@@ -183,7 +183,7 @@ public class SalesDAO {
 			db.close(pstmt);
 		} 
 		if(cnt != 1) {
-			System.out.println("## 클릭 수 증가 실패 ##");
+			//system.out.println("## 클릭 수 증가 실패 ##");
 		}
 		sql = sSQL.getSQL(sSQL.SAL_CONT);
 		pstmt = db.getPSTMT(con, sql);

@@ -19,11 +19,11 @@ public class InFoProc implements ClsController {
 		MemberDAO mDAO = new MemberDAO();
 		
 		String sid = (String) req.getSession().getAttribute("SID");
-		System.out.println(sid + "왔습니까?");
+		//system.out.println(sid + "왔습니까?");
 		MemberVO mVO = mDAO.info(sid);
 		
 		req.setAttribute("DATA", mVO);
-		System.out.println(sid + "오셨습니까?");
+		//system.out.println(sid + "오셨습니까?");
 		return view;
 	}
 

@@ -19,13 +19,13 @@ public class CommentEditProc implements ClsController {
 			bno = Integer.parseInt(eno);
 		} catch (Exception e) {
 		}
-		System.out.println(eno + " , " + bdbd);
+		//system.out.println(eno + " , " + bdbd);
 		// 3. DB에서 데이터 가져오고
 		// 4. 데이터 받고
 		BoardDAO bDAO = new BoardDAO();
 		req.setAttribute("no", bno);
 		req.setAttribute("bd", bdbd);
-		System.out.println("위치확인");
+		//system.out.println("위치확인");
 		// 5. 화면에 심고
 
 		return view;

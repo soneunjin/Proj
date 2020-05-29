@@ -58,7 +58,7 @@ public class BoardDAO {
 			rs = pstmt.executeQuery();
 			rs.next();
 			cnt = rs.getInt("cnt");
-			System.out.println("여기 " + cnt);
+			//system.out.println("여기 " + cnt);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -88,7 +88,7 @@ public class BoardDAO {
 			rs = pstmt.executeQuery();
 			rs.next();
 			cnt = rs.getInt("cnt");
-			System.out.println("여기 " + cnt);
+			//system.out.println("여기 " + cnt);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -114,7 +114,7 @@ public class BoardDAO {
 			pstmt.setString(4, id);
 
 			cnt = pstmt.executeUpdate();
-			System.out.println(cnt);
+			//system.out.println(cnt);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -140,7 +140,7 @@ public class BoardDAO {
 			pstmt.setInt(3, orino);
 
 			cnt = pstmt.executeUpdate();
-			System.out.println(cnt);
+			//system.out.println(cnt);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -162,7 +162,7 @@ public class BoardDAO {
 			pstmt.setString(1, cat);
 			pstmt.setInt(2, page.getStartCont());
 			pstmt.setInt(3, page.getEndCont());
-			System.out.println(cat);
+			//system.out.println(cat);
 			rs = pstmt.executeQuery();
 			while (rs.next()) {
 				BoardVO bVO = new BoardVO();
@@ -214,7 +214,7 @@ public class BoardDAO {
 				bVO.setVcnt(rs.getInt("vcnt"));
 
 				list.add(bVO);
-				System.out.println("요기2리스트사이즈" + list.size());
+				//system.out.println("요기2리스트사이즈" + list.size());
 
 			}
 		} catch (Exception e) {
@@ -246,7 +246,7 @@ public class BoardDAO {
 			
 
 			pstmt.setString(1, input);
-//			System.out.println(condition +",");
+//			//system.out.println(condition +",");
 			pstmt.setInt(2, page.getStartCont());
 			pstmt.setInt(3, page.getEndCont());
 			rs = pstmt.executeQuery();
@@ -263,7 +263,7 @@ public class BoardDAO {
 				bVO.setVcnt(rs.getInt("vcnt"));
 				
 				slist.add(bVO);
-				System.out.println("요기리스트사이즈" + slist.size());
+				//system.out.println("요기리스트사이즈" + slist.size());
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -312,7 +312,7 @@ public class BoardDAO {
 		BoardVO bVO1 = new BoardVO();
 		con = db.getCon();
 		String sql = bSQL.getSQL(bSQL.EDIT_CLICK_BRD);
-		System.out.println("DAO :" + bdno);
+		//system.out.println("DAO :" + bdno);
 		pstmt = db.getPSTMT(con, sql);
 		try {
 			pstmt.setInt(1, bdno);
@@ -361,7 +361,7 @@ public class BoardDAO {
 			pstmt.setInt(4, bno);
 
 			cnt = pstmt.executeUpdate();
-			System.out.println(cnt);
+			//system.out.println(cnt);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -386,7 +386,7 @@ public class BoardDAO {
 			pstmt.setInt(2, bno);
 
 			cnt = pstmt.executeUpdate();
-			System.out.println(cnt);
+			//system.out.println(cnt);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -405,7 +405,7 @@ public class BoardDAO {
 		pstmt = db.getPSTMT(con, sql);
 		try {
 			pstmt.setInt(1, bno);
-			System.out.println("DAO BNO" + bno);
+			//system.out.println("DAO BNO" + bno);
 			rs = pstmt.executeQuery();
 			while (rs.next()) {
 				BoardVO bVO = new BoardVO();

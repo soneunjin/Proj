@@ -16,7 +16,7 @@ public class QnaWrite implements ClsController {
 	public String exec(HttpServletRequest req, HttpServletResponse resp) {
 		String view = "/qna/qnaWrite.jsp";
 		String mid = req.getParameter("sid");
-      //System.out.println(mid);
+      ////system.out.println(mid);
 		QnaDAO qDAO = new QnaDAO();
 		
 		String sid = qDAO.getMname(mid);

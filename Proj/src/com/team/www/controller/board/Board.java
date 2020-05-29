@@ -17,7 +17,7 @@ public class Board implements ClsController {
 		String view = "/board/board.jsp";
 		int nowPage = 1;
 		String strPage = req.getParameter("nowPage");
-//		System.out.println("NowPage : " + strPage);
+//		//system.out.println("NowPage : " + strPage);
 		try {
 			nowPage = Integer.parseInt(strPage);
 			

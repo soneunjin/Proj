@@ -17,13 +17,13 @@ public class IdFindPro extends HttpServlet {
 	public void service(HttpServletRequest req, HttpServletResponse resp) {
 		
 		String sid = req.getParameter("name");
-		System.out.println(sid);
+		//system.out.println(sid);
 		String phone = req.getParameter("phone");
-		System.out.println(phone);
+		//system.out.println(phone);
 		
 		MemberDAO mDAO = new MemberDAO();
 		String user_id = mDAO.id_find(sid, phone);
-		System.out.println(user_id);
+		//system.out.println(user_id);
 		
 		try {
 			PrintWriter pw = resp.getWriter();

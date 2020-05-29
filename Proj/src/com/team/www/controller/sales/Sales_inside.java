@@ -27,10 +27,10 @@ public class Sales_inside implements ClsController {
 		SalesVO sVO = new SalesVO();
 		String memid = req.getParameter("memid");
 		String savename = req.getParameter("img");
-		System.out.println("************** sname : " + savename);
+		//system.out.println("************** sname : " + savename);
 		String car = req.getParameter("car");
 		sVO.setMemid(req.getParameter("memid"));
-		System.out.println("inside.memid : " + memid);
+		//system.out.println("inside.memid : " + memid);
 		sVO.setPno(Integer.parseInt(req.getParameter("pno")));
 		sVO.setBcnt(Integer.parseInt(req.getParameter("bcnt")));
 		sVO.setPtt(req.getParameter("ptt"));

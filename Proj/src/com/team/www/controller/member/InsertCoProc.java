@@ -23,11 +23,11 @@ public class InsertCoProc implements ClsController {
 		String bceo = req.getParameter("bceo");
 //		int sbtel = Integer.parseInt(btel);
 		
-		System.out.println("Proc.bno : " + bno);
-		System.out.println("Proc.bname : " + bname);
-		System.out.println("Proc.btel : " + btel);
-		System.out.println("Proc.bloc : " + bloc);
-		System.out.println("Proc.bceo : " + bceo);
+		//system.out.println("Proc.bno : " + bno);
+		//system.out.println("Proc.bname : " + bname);
+		//system.out.println("Proc.btel : " + btel);
+		//system.out.println("Proc.bloc : " + bloc);
+		//system.out.println("Proc.bceo : " + bceo);
 		InsertDAO iDAO = new InsertDAO();
 		int cnt = iDAO.INSERT_CO(sid, bno, bname, btel, bloc, bceo);
 		

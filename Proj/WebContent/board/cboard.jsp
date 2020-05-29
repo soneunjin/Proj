@@ -29,7 +29,6 @@
 
 		$('.cpgbt').click(function() {
 			var str = $(this).html();
-			alert(str);
 			if (str == 'PRE') {
 				$('#nowPage').val('${PAGE.startPage - 1}');
 			} else if (str == 'NEXT') {
@@ -47,7 +46,6 @@
 		$('.tagbtn').click(function() {
 			var cat = $(this).attr('id');
 			$('#tab').val(cat);
-			alert(cat);
 			$('#ftfrm').attr('action', '/Project/board/Cboard.cls');
 			$('#ftfrm').submit();
 		});

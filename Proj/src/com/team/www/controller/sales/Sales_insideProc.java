@@ -19,7 +19,7 @@ public class Sales_insideProc implements ClsController {
 		}
 		String sno = req.getParameter("pno");
 		String memid = req.getParameter("memid");
-//		System.out.println("insideProc.memid : " + memid);
+//		//system.out.println("insideProc.memid : " + memid);
 		String strPage = req.getParameter("nowPage");
 		int pno = 0;
 		try{
@@ -27,7 +27,7 @@ public class Sales_insideProc implements ClsController {
 		} catch(Exception e) {}
 		SalesDAO sDAO = new SalesDAO();
 		SalesVO iVO = sDAO.selMemid(pno);
-		System.out.println("inside.Proc : " + iVO.getMemid());
+		//system.out.println("inside.Proc : " + iVO.getMemid());
 		SalesVO sVO = sDAO.getContent(pno);
 		FileVO imgVO = sDAO.selImg(pno);
 		SalesVO carVO = sDAO.selCar(pno);

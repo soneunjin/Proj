@@ -14,13 +14,13 @@ public class BoardWriteProc implements ClsController {
 		String view = "/board/board.cls";
 //		req.setAttribute("isRedirect", true);
 		String cate = req.getParameter("cate");
-		System.out.println(cate);
+		//system.out.println(cate);
 		String title = req.getParameter("title");
-		System.out.println(title);
+		//system.out.println(title);
 		String body = req.getParameter("body");
-		System.out.println(body);
+		//system.out.println(body);
 		String sid = (String) req.getSession().getAttribute("SID");
-		System.out.println(sid);
+		//system.out.println(sid);
 		BoardDAO bDAO = new BoardDAO();
 		int cnt = bDAO.addData(cate, title, body, sid);
 		

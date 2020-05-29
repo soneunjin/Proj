@@ -19,7 +19,7 @@ public class Sales_writeProc implements ClsController {
 		String view = "/Project/sales/sales.cls";
 		req.setAttribute("isRedirect", true);
 		String sid = (String)req.getSession().getAttribute("SID");
-		System.out.println("session : " + sid);
+		//system.out.println("session : " + sid);
 //		int pno = (int)req.getSession().getAttribute("pno");
 		String path = req.getSession().getServletContext().getRealPath("images");
 		MultipartRequest multi = null;
@@ -30,15 +30,15 @@ public class Sales_writeProc implements ClsController {
 		}
 		
 		String id = multi.getParameter("sid");
-		System.out.println("Proc.id : " + id);
+		//system.out.println("Proc.id : " + id);
 		String ptt = multi.getParameter("ptt");
-		System.out.println("Proc.ptt : " + ptt);
+		//system.out.println("Proc.ptt : " + ptt);
 		String bno = multi.getParameter("bno");
-		System.out.println("Proc.bno : " + bno);
+		//system.out.println("Proc.bno : " + bno);
 		String pbd = multi.getParameter("pbd");
-		System.out.println("Proc.pbd : " + pbd);
+		//system.out.println("Proc.pbd : " + pbd);
 		String cate = multi.getParameter("cate");
-		System.out.println("Proc.cate : " + cate);
+		//system.out.println("Proc.cate : " + cate);
 //		String imgno = multi.getParameter("imgno");
 //		int simgno = Integer.parseInt(imgno);
 		SalesVO sVO = new SalesVO();
@@ -48,7 +48,7 @@ public class Sales_writeProc implements ClsController {
 		sVO.setPbd(pbd);
 		sVO.setCate(cate);
 		
-		System.out.println("************* sVO.id : " + sVO.getId());
+		//system.out.println("************* sVO.id : " + sVO.getId());
 		
 		HashMap<String, String> map = new HashMap<String, String>();
 		map.put("id", sid);
@@ -67,7 +67,7 @@ public class Sales_writeProc implements ClsController {
 		FileVO fVO = new FileVO();
 		fVO.setId(sid);
 //		fVO.setImgno(simgno);
-		System.out.println("memid : " + sid);
+		//system.out.println("memid : " + sid);
 		fVO.setMulti(multi);
 		boolean bool = sDAO.addImgInfo(fVO);
 		return view;

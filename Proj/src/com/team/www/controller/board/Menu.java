@@ -22,7 +22,7 @@ public class Menu implements ClsController {
 
 		req.setAttribute("bdno", bno);
 		req.setAttribute("cobd", cbd);
-		System.out.println("요기" + sno);
+		//system.out.println("요기" + sno);
 		return view;
 
 	}

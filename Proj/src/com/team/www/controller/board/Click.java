@@ -22,13 +22,13 @@ public class Click implements ClsController {
 			
 		}catch(Exception e) {
 		}
-		System.out.println("np" + nowPage);
+		//system.out.println("np" + nowPage);
 		BoardDAO bDAO = new BoardDAO();
 		int totalCount = bDAO.getTotal();
-		System.out.println("TC" + totalCount);
+		//system.out.println("TC" + totalCount);
 		PageUtil page = new PageUtil(nowPage, totalCount, 10, 3);
 		ArrayList<BoardVO> list = bDAO.getAllList(page);
-		System.out.println("메인 " + list.size());
+		//system.out.println("메인 " + list.size());
 		// 데이터 뷰에 심고
 		req.setAttribute("LIST", list);
 		req.setAttribute("PAGE", page);

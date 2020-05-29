@@ -26,15 +26,15 @@ public class BoardCate implements ClsController {
 		}
 		BoardDAO bDAO = new BoardDAO();
 		String cate = req.getParameter("tab");
-		System.out.println("아무거나 " + cate);
+		//system.out.println("아무거나 " + cate);
 		// 3. DB에서 데이터 가져오고
 		// 4. 데이터 받고
 		int totalCount = bDAO.getCTotal(cate);
-		System.out.println("TcC" + totalCount);
+		//system.out.println("TcC" + totalCount);
 		
 		PageUtil page = new PageUtil(nowPage, totalCount, 10, 3);
 		ArrayList<BoardVO> clist = bDAO.getCateList(cate, page);
-		System.out.println("lsit" + clist.size());
+		//system.out.println("lsit" + clist.size());
 
 		// 5. 화면에 심고
 		req.setAttribute("LIST", clist);

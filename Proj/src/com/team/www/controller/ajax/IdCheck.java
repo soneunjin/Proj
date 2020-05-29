@@ -18,7 +18,7 @@ public class IdCheck extends HttpServlet {
 		// 할일
 		// 1. 데이터 받고
 		String sid = req.getParameter("email");
-		System.out.println(sid);// getParameter(키값);
+		//system.out.println(sid);// getParameter(키값);
 		// 2. 데이터베이스 작업해서 결과 받고
 		int cnt = new MemberDAO().getIdCnt(sid);
 		// 3. 결과를 제이슨 문서로 만들어서 응답해주고
