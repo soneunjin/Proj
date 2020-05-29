@@ -7,12 +7,18 @@ import java.util.*;
 
 public class SalesVO {
 	private int pno, bcnt, imgno, rno, memno, rst;
-	private String ptt, bno, pbd, cate, rtt, pshow, rshow, today, bceo, id, bloc, rbd, memid, carct;
+	private String ptt, bno, pbd, cate, rtt, pshow, rshow, today, bceo, id, bloc, rbd, memid, carct, bname;
 	private Date pDate;
 	private Time pTime;
 	private ArrayList<FileVO> file;
 	
 	
+	public String getBname() {
+		return bname;
+	}
+	public void setBname(String bname) {
+		this.bname = bname;
+	}
 	public String getCarct() {
 		return carct; 
 	}

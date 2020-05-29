@@ -39,7 +39,7 @@ public class SalesSQL {
 			break;
 		case SAL_CONT:
 			buff.append("SELECT ");
-			buff.append("p.pno pno , ptt, pbd, bceo, b.bno, p.today, bcnt, bloc, cate, m.memid, ");
+			buff.append("p.pno pno , ptt, pbd, bceo, b.bno, p.today, bcnt, bloc, cate, m.memid, b.bname, ");
 			buff.append("NVL(imgno, 0) imgno, NVL(oriname, 'none') oriname, NVL(savename, 'none') savename "); 
 			buff.append("FROM "); 
 			buff.append("promotion p, image i, boss b, member m "); 

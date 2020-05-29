@@ -38,6 +38,7 @@ public class Sales_inside implements ClsController {
 		sVO.setBceo(req.getParameter("bceo"));
 		sVO.setBloc(req.getParameter("bloc"));
 		sVO.setPbd(req.getParameter("pbd"));
+		sVO.setBname(req.getParameter("bname"));
 //		sVO.setImgno(Integer.parseInt(req.getParameter("imgno")));
 		sVO.setCate(req.getParameter("cate"));
 		sVO.setToday(req.getParameter("today"));

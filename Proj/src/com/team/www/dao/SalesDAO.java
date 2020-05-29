@@ -211,6 +211,7 @@ public class SalesDAO {
 				sVO.setBceo(rs.getString("bceo"));
 				sVO.setBloc(rs.getString("bloc"));
 				sVO.setCate(rs.getString("cate"));
+				sVO.setBname(rs.getString("bname"));
 //				sVO.setpDate(rs.getDate("pdate"));
 //				sVO.setpTime(rs.getTime("ptime"));
 //				sVO.setToday();
