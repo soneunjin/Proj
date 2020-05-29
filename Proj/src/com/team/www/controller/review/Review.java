@@ -1,5 +1,9 @@
 package com.team.www.controller.review;
-
+/**
+ * @author 김수진
+ * 
+ * 	이 컨트롤러는 리뷰 리스트 기능 컨트롤러
+ */
 import java.util.ArrayList;
 
 import javax.servlet.http.HttpServletRequest;
