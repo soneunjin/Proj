@@ -1,5 +1,6 @@
 package com.team.www.controller.sales;
 
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -16,12 +17,17 @@ public class Sales_inside implements ClsController {
 	@Override
 	public String exec(HttpServletRequest req, HttpServletResponse resp) {
 		String view = "/sales/sales_inside.jsp";
+		try {
+			req.setCharacterEncoding("UTF-8");
+		} catch (UnsupportedEncodingException e1) {
+			e1.printStackTrace();
+		}
 		SalesDAO sDAO = new SalesDAO();
 		String pno = req.getParameter("pno");
 		SalesVO sVO = new SalesVO();
 		String memid = req.getParameter("memid");
-		String savename = req.getParameter("savename");
-		
+		String savename = req.getParameter("img");
+		System.out.println("************** sname : " + savename);
 		String car = req.getParameter("car");
 		sVO.setMemid(req.getParameter("memid"));
 		System.out.println("inside.memid : " + memid);

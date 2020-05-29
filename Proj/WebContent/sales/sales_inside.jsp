@@ -15,6 +15,7 @@
 <body class="is-preload">
 	<script type="text/javascript" src="/Project/assets/js/sales.js"></script>
 	<script type="text/javascript">
+		alert('${IMG}');
 		$(document).ready(function(){
 			$('.btn').click(function() {
 				var tid = $(this).attr('id');
@@ -111,7 +112,7 @@
 					 <br>
 					 <div id="map" style="width:450px;height:450px; display: inline-block; margin-left: 50px;"></div>
 					 <span style="margin: 20px;">
-					 <img alt="" src="/Project/images/${param.savename}" style="height:450px; width:450px;">
+					 <img alt="" src="/Project/images/${IMG}" style="height:450px; width:450px;">
 					</span>
 					<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=bfbcb2a9b1a94611a8804b0d71d6315c&libraries=services"></script>
 					<script>

@@ -11,6 +11,7 @@
 </style>
 <script type="text/javascript">
 	$(function(){
+		alert('${IMG}');
 			$('#frm').submit();
 	});
 </script>
