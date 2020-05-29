@@ -25,7 +25,7 @@
 	 	<input type="hidden" name="memid"  value="${ID}"> 
 		<input type="hidden" name="img"  value="${IMG}">
 		<input type="hidden" name="car"  value="${CAR}">
-		
+		<input type="hidden" name="ptt" value="${DATA.ptt}">
 	</form>
 </body>
 </html>

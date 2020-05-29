@@ -68,8 +68,8 @@
 						by HTML5 UP</a>
 
 					<div class="icons">
-						<a href="/Project/login.cls" class=""> <c:if
-								test="${empty SID}">
+						<a href="/Project/login.cls" class=""> 
+						<c:if test="${empty SID}">
 								<div class="btn w3-button" id="login">
 									<b><span>SIGN IN</span></b></a>
 					</div>

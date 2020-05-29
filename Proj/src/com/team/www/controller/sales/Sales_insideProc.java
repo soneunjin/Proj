@@ -37,7 +37,6 @@ public class Sales_insideProc implements ClsController {
 		req.setAttribute("PNO", pno);
 		req.setAttribute("ID", iVO.getMemid());
 		req.setAttribute("CAR", carVO.getCarct());
-		
 		return view;
 	}
 

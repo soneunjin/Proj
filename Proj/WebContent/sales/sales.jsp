@@ -41,6 +41,7 @@
 		$('.pbtn').click(function(){
 			var str = $(this).text();
 			$('#nowPage').val(str);
+			
 			$('#frm').attr('action', '/Project/sales/sales.cls');
 			$('#frm').submit();
 		});

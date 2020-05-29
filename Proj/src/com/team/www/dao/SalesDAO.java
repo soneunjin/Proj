@@ -167,6 +167,7 @@ public class SalesDAO {
 		}
 		return bool;
 	}
+	
 	// 게시글 상세보기 
 	public SalesVO getContent(int pno) {
 		SalesVO sVO = new SalesVO();
