@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>메인페이지</title>
+<title>Q&A</title>
 
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no" />

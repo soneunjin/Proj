@@ -97,7 +97,7 @@
 							<!-- Menu -->
 								<nav id="menu">
 									<header class="major">
-							   				<img class="ima_1" src="../images/main.png" border="0" />
+							   				<img class="ima_1 gohome" src="../images/main.png" border="0" />
 							   			<a></a>
 										<h2>Menu</h2>
 									</header>
@@ -153,6 +153,10 @@
 			<script type="text/javascript">
 			$(function(){
 				$('.detail').css('display', 'none');
+				
+				$('.gohome').click(function(){
+					$(location).attr('href','/Project/main.cls');
+				});
 				/*
 				$('#login').click(function(){
 					$(location).attr('href', '/Project/member/login.cls');

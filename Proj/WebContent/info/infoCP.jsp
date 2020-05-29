@@ -99,7 +99,7 @@
 							<!-- Menu -->
 								<nav id="menu">
 									<header class="major">
-							   				<img class="ima_1" src="../images/main.png" border="0" />
+							   				<img class="ima_1 gohome" src="../images/main.png" border="0" />
 							   			</a>
 										<h2>Menu</h2>
 									</header>
@@ -154,6 +154,10 @@
 			<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=bfbcb2a9b1a94611a8804b0d71d6315c&libraries=services"></script>
 			<script type="text/javascript">
 			$(function(){
+				$('.gohome').click(function(){
+					$(location).attr('href','/Project/main.cls');
+				});
+				
 				$('.detail').css('display', 'none');
 				/*
 				$('#login').click(function(){
