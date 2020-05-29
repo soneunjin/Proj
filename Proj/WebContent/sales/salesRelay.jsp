@@ -24,7 +24,7 @@
 		<input type="hidden" name="today"  value="${DATA.today}">
 		<input type="hidden" name="bcnt"  value="${DATA.bcnt}">
 		<input type="hidden" name="bloc"  value="${DATA.bloc}">
-	 <input type="hidden" name="memid"  value="${ID}"> 
+	 	<input type="hidden" name="memid"  value="${ID}"> 
 		<input type="hidden" name="img"  value="${IMG}">
 		<input type="hidden" name="car"  value="${CAR}">
 		
