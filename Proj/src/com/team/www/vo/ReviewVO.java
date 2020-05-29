@@ -5,9 +5,16 @@ import java.text.*;
 
 public class ReviewVO {
 	private int rno, pno, memno, rst;
-	private String rtt, rbd, today, memid, ptt;
+	private String rtt, rbd, today, memid, ptt, name;
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
 	private Date reDate;
 	private Time reTime;
+	
 	public int getRno() {
 		return rno;
 	}

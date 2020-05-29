@@ -12,10 +12,10 @@ public class ReviewSQL {
 		switch(code) { 
 		case RE_LIST:
 			buff.append("SELECT "); 
-			buff.append("	ee.rrno, rno, memid, ptt, rtt, rbd, memno, rst "); 
+			buff.append("	ee.rrno, rno,name, memid, ptt, rtt, rbd, memno, rst "); 
 			buff.append("FROM "); 
 			buff.append("	(SELECT "); 
-			buff.append("		rownum rrno, rno, m.memid, ptt, rtt, rbd, m.memno, e.today, rst "); 
+			buff.append("		rownum rrno, rno,name, m.memid, ptt, rtt, rbd, m.memno, e.today, rst "); 
 			buff.append("	FROM "); 
 			buff.append("		(SELECT "); 
 			buff.append("			p.pno, ptt, bno, pbd, p.today, bcnt, pshow, cate, rno, rtt, rbd, memno, rst, rshow "); 

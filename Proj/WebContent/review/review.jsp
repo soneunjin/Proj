@@ -97,7 +97,7 @@
 								<span>글번호 : </span><span name="rno" value="${data.rno}">${data.rno}</span>
 								<span>
 									<h5>
-										<b>아이디 : ${data.memid}</b>
+										<b>이름 : ${data.name}</b>
 									</h5>
 								</span>
 								<hr>

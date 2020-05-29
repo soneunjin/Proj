@@ -287,7 +287,6 @@ public class MemberDAO {
 				list.add(mVO);
 			}
 		} catch(Exception e) {
-			e.printStackTrace();
 		} finally {
 			db.close(rs);
 			db.close(stmt);

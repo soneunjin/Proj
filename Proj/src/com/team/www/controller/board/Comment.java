@@ -1,4 +1,6 @@
 /**
+ * @author 이진수
+ * 
  */
 
 package com.team.www.controller.board;

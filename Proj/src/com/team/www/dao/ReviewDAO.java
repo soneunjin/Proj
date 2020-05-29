@@ -36,6 +36,7 @@ public class ReviewDAO {
 			while(rs.next()) {
 				ReviewVO rVO = new ReviewVO();
 				rVO.setMemid(rs.getString("memid"));
+				rVO.setName(rs.getString("name"));
 				rVO.setRno(rs.getInt("rno"));
 				rVO.setPtt(rs.getString("ptt"));
 				rVO.setRtt(rs.getString("rtt"));
