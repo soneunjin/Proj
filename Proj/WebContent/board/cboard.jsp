@@ -43,13 +43,13 @@
 		$('.bdh').click(function() {
 			location.href = "/Project/board/board.cls"
 		});
-		$('.tagbtn').click(function() {
+		/* $('.tagbtn').click(function() {
 			var cat = $(this).attr('id');
 			$('#tab').val(cat);
 			$('#ftfrm').attr('action', '/Project/board/Cboard.cls');
 			$('#ftfrm').submit();
 		});
-
+ */
 	});
 </script>
 

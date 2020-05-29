@@ -46,3 +46,8 @@
 .mrg_left{
 	margin-left: 50px;
 }
+.ftt{
+	font-size: 30px;
+	font-family: '나눔고딕', 'Malgun Gothic', sans-serif;
+	font-weight :bold;
+}
