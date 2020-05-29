@@ -5,7 +5,7 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>드라이브 스루</title>
+		<title>드루왕</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="/Project/assets/css/main.css" />
 		<link rel="stylesheet" href="/Project/css/w3.css" />

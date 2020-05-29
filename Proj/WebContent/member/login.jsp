@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title></title>
+<title>Welcome to 드루왕</title>
 
 <link rel="stylesheet" href="/Project/css/w3.css">
 <link rel="stylesheet" href="/Project/css/login.css">
