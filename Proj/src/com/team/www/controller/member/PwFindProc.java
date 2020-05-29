@@ -21,7 +21,7 @@ public class PwFindProc implements ClsController {
 
 	@Override
 	public String exec(HttpServletRequest req, HttpServletResponse resp) {
-		String view = "/Project/member/login.jsp";
+		String view = "/Project/member/login.cls";
 		req.setAttribute("isRedirect", true);
 		// 파라미터 가져오고
 		String name = req.getParameter("name");
@@ -31,7 +31,7 @@ public class PwFindProc implements ClsController {
 		
 		String host = "smtp.naver.com";
 		String user = "sej0267@naver.com";
-		String password = "156478asd!!";
+		String password = "156478as!!";
 		
 		
 		
